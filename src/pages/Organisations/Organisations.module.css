@@ -1,0 +1,8 @@
+.Container{
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 200%;
+    max-width: 100%;
+}

@@ -1,0 +1,35 @@
+.container{
+  position: relative;
+  top: 25vh;
+}
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 5vh;
+}
+
+.search_bar {
+  margin-top: 5vh;
+  position: relative;
+  top: 15vh; 
+  left: 32vh;
+  padding-left: 3.5vh;
+  width: 60%;
+  height: 5.1vh;
+  border-radius: 3vh;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  color: rgb(31, 31, 31);
+  font-size: 2vh;
+  align-items: center;
+}
+
+.search_bar::placeholder {
+  position: relative;
+  top: 0.2vh;
+  color: rgb(31, 31, 31);
+  font-size: 2vh;
+}

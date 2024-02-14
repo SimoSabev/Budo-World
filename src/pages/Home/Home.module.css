@@ -1,0 +1,8 @@
+.Container {
+    background: url('https://i.pinimg.com/564x/75/f0/97/75f0977e5d87b8fda51fafc4c2198cef.jpg') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh; /* Updated to 100vh to cover the entire viewport height */
+    max-width: 100vw;
+}

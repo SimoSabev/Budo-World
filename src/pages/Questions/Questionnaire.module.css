@@ -1,0 +1,90 @@
+.main_container{
+  height: 100%;
+  width: 100vw;
+  max-width: 100vw;
+  background-color: #252525;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+.questionnaire_container {
+  width: 33vw;
+  max-width: 90vw;
+  height: 70vh;
+  position: relative;
+  top: 10vh;
+  padding: 3vh;
+  background-color: #0000006e;
+  box-shadow: 0 3vh 1vh rgba(0, 0, 0, 0.1);
+  border-radius: 2vh;
+  text-align: center;
+  transition: .3s;
+}
+.questionnaire_button {
+  position: relative;
+  top: 1.4vh;
+  left: 21.7vh;
+  padding: 1.4vh 5vh;
+  font-size: 1.1rem;
+  background-color: #ff3c00;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: .3s;
+  margin: 1.5vh 0; /* Adjust the margin as needed */
+  align-self: center; /* Aligns the button to the center horizontally */
+}
+
+.link_button {
+  position: relative;
+  top: 30vh;
+  left: 0.35vh;
+  padding: 2vh 5vh;
+  border-radius: 5vh;
+  font-size: 1.7rem;
+  background-color: #ff2600;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: .2s;
+  align-self: center; /* Aligns the button to the center horizontally */
+  margin-top: 3vh; /* Adjust the top margin as needed */
+}
+.questionnaire_button:hover{
+  background-color: #fc6c40;
+}
+ .result_container {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+}
+
+.result_container h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.result_container p {
+  font-size: 1rem;
+  margin: 5px 0;
+} 
+.link_button {
+  position: relative;
+  top: 30vh;
+  left: .35vh;
+  padding: 2vh 5vh;
+  border-radius: 5vh;
+  font-size: 1.7rem;
+  background-color: #ff2600;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition:.2s;
+}
+.link_button:hover {
+  background-color: #fc5640;
+}

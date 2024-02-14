@@ -1,0 +1,92 @@
+/* In your CSS */
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    left: 25vh;
+    width: 110vw;
+    max-width: 100vh;
+    height: 100%;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 75vw; /* Adjust as needed */
+    left: 40vh;
+    margin: auto;
+  }
+  
+  .img {
+    width: 100%;
+    height: 300px; /* Custom height */
+    position: relative;
+  }
+  
+  .img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://i.pinimg.com/564x/75/f0/97/75f0977e5d87b8fda51fafc4c2198cef.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+  }
+  
+  
+  
+  
+  .image {
+    width: 80%;
+    height: 20%;
+    max-width: 70vw; /* Adjust as needed */
+  }
+  
+  .contentContainer {
+    background-color: #444444; /* Choose your desired background color */
+    border-radius: 3vh;
+    padding: 4vh; /* Adjust padding as needed */
+    position: relative;
+    top: 40vh; /* Adjust as needed */
+    left: 15vh;
+    width: 110%;
+    box-sizing: border-box; /* Include padding in width */
+  }
+  
+  .content {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .header {
+    font-size: 3vw; /* Adjust as needed */
+    color: aliceblue;
+    margin-bottom: 2vh;
+  }
+  
+  .content_history {
+    font-size: 1.5vw; /* Adjust as needed */
+    color: aliceblue;
+  }
+  
+  .video_group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 50vh;
+    left: 15vh;
+  }
+  
+  .video {
+    margin-bottom: 15vh; /* Adjust as needed */
+  }
+  
+  /* ... (Other styles you may have) */
+  
