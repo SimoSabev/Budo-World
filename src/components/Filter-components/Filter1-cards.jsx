@@ -14,47 +14,35 @@ const Filter1_Cards = () => {
     {
       id: "card-1",
       imageSrc:
-        "https://i.pinimg.com/236x/f2/f6/06/f2f6068a98713a30a0b6b10656c51ea8.jpg",
-      heading: "Kickboxing",
-    },
-    {
-      id: "card-2",
-      imageSrc:
-        "https://i.pinimg.com/236x/65/b7/98/65b798f8d6889f829791f2b6fb6703f9.jpg",
-      heading: "Boxing",
-    },
-    {
-      id: "card-3",
-      imageSrc:
         "https://i.pinimg.com/236x/62/f3/63/62f363428d40c68a7793d6e9b87b51fc.jpg",
       heading: "Muay Thai",
     },
     {
-      id: "card-5",
+      id: "card-2",
       imageSrc:
         "https://i.pinimg.com/236x/6b/33/c2/6b33c219f342f0da2f36307199d27172.jpg",
       heading: "Taekwondo",
     },
     {
-      id: "card-6",
+      id: "card-3",
       imageSrc:
         "https://i.pinimg.com/236x/2d/55/fc/2d55fc892d97a554d53871828b31f047.jpg",
       heading: "Karate",
     },
     {
-      id: "card-7",
+      id: "card-4",
       imageSrc:
-        "https://i.pinimg.com/236x/f1/40/d1/f140d1fc21f261f668ae895319cfc292.jpg",
-      heading: "MMA",
+        "https://i.pinimg.com/236x/d6/58/b5/d658b5b9beeef877f6885f90bdfcaab6.jpg",
+      heading: "Wing Chun",
     },
     {
-      id: "card-10",
+      id: "card-5",
       imageSrc:
-        "https://i.pinimg.com/236x/18/40/24/184024656b156b737243fef7406ca6c6.jpg",
-      heading: "Sambo",
+        "https://i.pinimg.com/236x/95/fa/9d/95fa9d110002924209f1ac7e833f3f81.jpg  ",
+      heading: "Kung fu",
     },
     {
-      id: "card-11",
+      id: "card-6",
       imageSrc:
         "https://i.pinimg.com/236x/2c/62/bf/2c62bffb43a3ca6099918eaa8e9c3ad5.jpg",
       heading: "Lethwei",

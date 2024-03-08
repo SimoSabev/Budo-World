@@ -2,29 +2,28 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { onAuthStateChanged, signInWithEmailAndPassword, signOut } from 'firebase/auth';
 import { auth } from '../../firebase-config';
-// import bcrypt from 'bcrypt';
 import styles from './Login.module.css';
 
 const Login = () => {
-  const [loginEmail, setloginEmail] = useState('');
-  const [loginPassword, setloginPassword] = useState('');
+  const [loginEmail, setLoginEmail] = useState('');
+  const [loginPassword, setLoginPassword] = useState('');
   const [user, setUser] = useState(null);
+  const [loggedIn, setLoggedIn] = useState(false);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      setUser(currentUser || null); // Set to null if currentUser is null
+      setUser(currentUser || null);
     });
 
-    return () => unsubscribe(); // Cleanup function to unsubscribe when component unmounts
+    return () => unsubscribe();
   }, []);
 
   const login = async () => {
     try {
-      // const hashedPassword = await bcrypt.hash(loginPassword, 10);
-
       const userCredential = await signInWithEmailAndPassword(auth, loginEmail, loginPassword);
       const user = userCredential.user;
       console.log(user);
+      setLoggedIn(true); // Set loggedIn state to true after successful login
     } catch (error) {
       console.error(error.message);
     }
@@ -33,6 +32,7 @@ const Login = () => {
   const signout = async () => {
     try {
       await signOut(auth);
+      setLoggedIn(false); // Set loggedIn state to false after signout
     } catch (error) {
       console.error(error.message);
     }
@@ -47,7 +47,7 @@ const Login = () => {
             className={styles.Email}
             placeholder="Имейл..."
             onChange={(event) => {
-              setloginEmail(event.target.value);
+              setLoginEmail(event.target.value);
             }}
           />
           <input
@@ -55,37 +55,37 @@ const Login = () => {
             placeholder="Парола..."
             type="password"
             onChange={(event) => {
-              setloginPassword(event.target.value);
+              setLoginPassword(event.target.value);
             }}
           />
-
-          <button className={styles.button} onClick={login}>
-            Влезте в профила си
-          </button>
+          {loggedIn ? (
+            <Link to="/home">
+              <button className={styles.button}>
+                Продължете напред
+              </button>
+            </Link>
+          ) : (
+            <button className={styles.button} onClick={login}>
+              Влезте в профила си
+            </button>
+          )}
         </div>
 
         <div className={styles.link_element}>
           <p className={styles.link1}>Нямате акаунт? </p>
-          <Link className={styles.link2} to="/signup">
+          <Link className={styles.link2} to="/">
             Регистрирай се
           </Link>
         </div>
       </div>
-      <div className={styles.user}>
-        {user?.email} &nbsp;&nbsp;&nbsp;
-        <Link to="/signup">
+      {!loggedIn && (
+        <div className={styles.user}>
+          {user?.email} &nbsp;&nbsp;&nbsp;
           <button className={styles.signout} onClick={signout}>
             Отписване
           </button>
-        </Link>
-      </div>
-      <div>
-        <Link to="/">
-            <button className={styles.go_back} onClick={signout}>
-              Назад
-            </button>
-          </Link>
-      </div>
+        </div>
+      )}
     </div>
   );
 };

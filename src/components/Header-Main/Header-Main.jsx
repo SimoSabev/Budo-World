@@ -1,8 +1,6 @@
 import React from "react";
 import styles from "./Header-Main.module.css";
 import { Link } from "react-router-dom";
-import image from '../../Images/martial-artist1.png';
-import image1 from '../../Images/martial-artist1.png';
 
 const HeaderMain = () => {
   return (
@@ -15,7 +13,7 @@ const HeaderMain = () => {
         </h1>
 
         <div className={styles.button_group}>
-          <button className={styles.button2}>
+          <button type="button" className={styles.button2}>
           <Link to="/мartial аrts">
           Напред
               <img
@@ -26,7 +24,7 @@ const HeaderMain = () => {
             </Link>
           </button>
 
-          <button className={styles.button1}>
+          <button type="button" className={styles.button1}>
             <Link to="/questions">
               <img
                 className={styles.img1}

@@ -8,7 +8,7 @@ const Navbar = () => {
     <nav className={styles.nav_bar}>
       <div className={styles.left}>
         <li className={styles.li_1}>
-          <Link to="/">Начало</Link>
+          <Link to="/home">Начало</Link>
         </li>
       </div>
       <div className={styles.middle}>
@@ -21,7 +21,7 @@ const Navbar = () => {
           <Link to="/login">Вписване</Link>
         </li>
         <li className={styles.li_3}>
-          <Link to="/signup">Регистрация</Link>
+          <Link to="/">Регистрация</Link>
         </li>
       </div>
     </nav>

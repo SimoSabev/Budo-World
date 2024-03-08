@@ -1,8 +1,8 @@
 .container{
-    background-color: #111111;
+    background: url('https://img.freepik.com/free-vector/seamless-weave-pattern-black-background_53876-97588.jpg?size=626&ext=jpg&ga=GA1.1.299299202.1700144953&semt=ais') center/cover no-repeat;
     display: flex;
     justify-content: center;
     width: 100vw;
-    height: 500%;
+    height: 120%; /* Updated to 100vh to cover the entire viewport height */
     max-width: 100vw;
 }

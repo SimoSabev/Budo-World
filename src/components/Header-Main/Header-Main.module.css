@@ -75,11 +75,34 @@ a{
  .button2:hover{
    background-color: rgb(148, 148, 148);
 }
-.Image{
-    position: absolute;
-    left: 129vh;
-    bottom: 26.5vh; 
+.Image {
+   position: absolute;
+   left: 72%;
+   bottom: 26.5vh; 
+   width: 20%; /* Adjust the width as needed */
+   max-width: 40vh; /* Set a maximum width */
 }
-.img{
-   width: 40vh;
+
+@media (max-width: 768px) {
+   .Image {
+       left: 50%; /* Adjust the position for smaller screens */
+       bottom: 10vh; /* Adjust the position for smaller screens */
+       width: 40%; /* Adjust the width for smaller screens */
+       max-width: 30vh; /* Set a maximum width for smaller screens */
+       transform: translateX(-50%); /* Center the image horizontally */
+   }
 }
+
+@media (max-width: 480px) {
+   .Image {
+       bottom: 5vh; /* Adjust the position for even smaller screens */
+       width: 60%; /* Adjust the width for even smaller screens */
+       max-width: 20vh; /* Set a maximum width for even smaller screens */
+   }
+}
+
+.img {
+   width: 100%; /* Make the image width 100% of its container */
+   height: auto; /* Maintain aspect ratio */
+}
+

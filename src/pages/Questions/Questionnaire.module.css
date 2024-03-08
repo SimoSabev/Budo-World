@@ -1,14 +1,34 @@
 .main_container{
-  height: 100%;
-  width: 100vw;
-  max-width: 100vw;
-  background-color: #252525;
+    background: url('https://img.freepik.com/free-photo/grunge-black-concrete-textured-background_53876-124541.jpg') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100%; /* Updated to 100vh to cover the entire viewport height */
+    max-width: 100vw;
 }
+.back_button {
+  position: absolute;
+  top: 2vh;
+  left: 2vh;
+  padding:.8vh;
+  border-radius: 6vh;
+  width: 15vh;
+  cursor: pointer;
+  color: #f3e9e9;
+  background-color: #303030;
+}
+
+.back_button:hover{
+  background-color: rgb(105, 105, 105);
+}
+
 .container{
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: auto;
+  position: relative;
+  bottom: 10vh;
 }
 .questionnaire_container {
   width: 33vw;

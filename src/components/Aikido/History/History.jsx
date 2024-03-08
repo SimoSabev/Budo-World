@@ -1,13 +1,14 @@
 import React from "react";
-import ReactPlayer from "react-player";
 import styles from "./History.module.css";
+
 
 const History = () => {
   return (
     <div className={styles.main}>
       <div className={styles.container}>
-          <div className={`${styles.img} img`}>      
-      </div>
+          <div >
+              <img className={`${styles.img} img`} src="Images/Shiseikan2.jpg" alt="" />
+          </div>
 
           <div className={styles.contentContainer}>
             {" "}
@@ -52,17 +53,6 @@ const History = () => {
               </p>
             </div>
           </div>
-
-        <div>
-          <div className={styles.video_group}>
-            <div className={styles.video}>
-              <ReactPlayer url="https://www.youtube.com/watch?v=LXb3EKWsInQ" />
-            </div>
-            <div className={styles.video}>
-              <ReactPlayer url="https://www.youtube.com/watch?v=LXb3EKWsInQ" />
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );

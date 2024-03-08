@@ -17,34 +17,15 @@
     max-width: 75vw; /* Adjust as needed */
     left: 40vh;
     margin: auto;
+    
   }
   
   .img {
-    width: 100%;
-    height: 300px; /* Custom height */
+    top: 10vh;
+    width: 60vw;
+    right: 4vh;
+    height: 60vh; /* Custom height */
     position: relative;
-  }
-  
-  .img::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('https://i.pinimg.com/564x/75/f0/97/75f0977e5d87b8fda51fafc4c2198cef.jpg');
-    background-size: cover;
-    background-position: center;
-    z-index: -1;
-  }
-  
-  
-  
-  
-  .image {
-    width: 80%;
-    height: 20%;
-    max-width: 70vw; /* Adjust as needed */
   }
   
   .contentContainer {
@@ -52,8 +33,7 @@
     border-radius: 3vh;
     padding: 4vh; /* Adjust padding as needed */
     position: relative;
-    top: 40vh; /* Adjust as needed */
-    left: 15vh;
+    top: 20vh;
     width: 110%;
     box-sizing: border-box; /* Include padding in width */
   }
@@ -77,15 +57,14 @@
   
   .video_group {
     display: flex;
-    flex-direction: column;
     align-items: center;
     position: relative;
     top: 50vh;
-    left: 15vh;
   }
   
   .video {
     margin-bottom: 15vh; /* Adjust as needed */
+    padding: 5vh;
   }
   
   /* ... (Other styles you may have) */

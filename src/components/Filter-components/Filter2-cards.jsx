@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Card from "../martial-arts-cards/martial-arts-cards";
-import styles from "../../../components/martial-arts-cards/Martial-Arts.module.css";
+import styles from "../../components/martial-arts-cards/Martial-Arts.module.css";
 import { Link } from "react-router-dom";
 
 const Filter2_Cards = () => {
@@ -18,82 +18,22 @@ const Filter2_Cards = () => {
       heading: "Aikido",
     },
     {
-      id: "card-2",
-      imageSrc:
-        "https://i.pinimg.com/236x/f2/f6/06/f2f6068a98713a30a0b6b10656c51ea8.jpg",
-      heading: "Kickboxing",
-    },
-    {
-      id: "card-3",
-      imageSrc:
-        "https://i.pinimg.com/236x/65/b7/98/65b798f8d6889f829791f2b6fb6703f9.jpg",
-      heading: "Boxing",
-    },
-    {
-      id: "card-4",
-      imageSrc:
-        "https://i.pinimg.com/236x/62/f3/63/62f363428d40c68a7793d6e9b87b51fc.jpg",
-      heading: "Muay Thai",
-    },
-    {
-      id: "card-5",
-      imageSrc:
-        "https://i.pinimg.com/236x/e3/19/a6/e319a61f8506ed09ee3a3d606b6bed67.jpg",
-      heading: "Wrestling",
-    },
-    {
-      id: "card-6",
-      imageSrc:
-        "https://i.pinimg.com/236x/6b/33/c2/6b33c219f342f0da2f36307199d27172.jpg",
-      heading: "Taekwondo",
-    },
-    {
-      id: "card-7",
-      imageSrc:
-        "https://i.pinimg.com/236x/2d/55/fc/2d55fc892d97a554d53871828b31f047.jpg",
-      heading: "Karate",
-    },
-    {
-      id: "card-8",
-      imageSrc:
-        "https://i.pinimg.com/236x/d7/3d/9a/d73d9a9f9c1be58337e3bea3eefa0cd6.jpg",
-      heading: "Krav Maga",
-    },
-    {
-      id: "card-9",
-      imageSrc:
-        "https://i.pinimg.com/236x/f1/40/d1/f140d1fc21f261f668ae895319cfc292.jpg",
-      heading: "MMA",
-    },
-    {
-      id: "card-10",
+      id: "card-11",
       imageSrc:
         "https://i.pinimg.com/236x/33/98/36/33983681b4f7e0d42d19c76adc63a16b.jpg",
       heading: "Judo",
     },
     {
-      id: "card-11",
-      imageSrc:
-        "https://i.pinimg.com/236x/06/11/ea/0611ea152313da63dd8e309c2e73e873.jpg",
-      heading: "Brazilian Jiu-Jitsu",
-    },
-    {
-      id: "card-12",
+      id: "card-13",
       imageSrc:
         "https://i.pinimg.com/236x/89/16/b6/8916b6c9be4c9ef8b35ad6a4a0e63e8f.jpg",
       heading: "Japanese Jiu-Jitsu",
     },
     {
-      id: "card-13",
+      id: "card-19",
       imageSrc:
-        "https://i.pinimg.com/236x/18/40/24/184024656b156b737243fef7406ca6c6.jpg",
-      heading: "Sambo",
-    },
-    {
-      id: "card-14",
-      imageSrc:
-        "https://i.pinimg.com/236x/2c/62/bf/2c62bffb43a3ca6099918eaa8e9c3ad5.jpg",
-      heading: "Lethwei",
+        "https://i.pinimg.com/236x/19/00/4d/19004d2454b7a2cdeeaff7f1bb639340.jpg",
+      heading: "Sumo",
     },
   ];
 

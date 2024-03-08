@@ -8,6 +8,7 @@ const Signup = () => {
    const [registerEmail, setRegisterEmail] = useState('');
    const [registerPassword, setRegisterPassword] = useState('');
    const [user, setUser] = useState(null);
+   const [registered, setRegistered] = useState(false);
 
    useEffect(() => {
       const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -22,6 +23,7 @@ const Signup = () => {
          const userCredential = await createUserWithEmailAndPassword(auth, registerEmail, registerPassword);
          const user = userCredential.user;
          console.log(user);
+         setRegistered(true); // Set registered state to true after successful signup
       } catch (error) {
          console.error(error.message);
       }
@@ -55,7 +57,14 @@ const Signup = () => {
                      setRegisterPassword(event.target.value);
                   }}
                />
-               <button className={styles.button} onClick={signup}> Създай профил</button>
+               {!registered && <button className={styles.button} onClick={signup}> Създай профил</button>}
+               {registered && (
+                  <Link to="/home">
+                     <button className={styles.button}>
+                        Напред
+                     </button>
+                  </Link>
+               )}
             </div>
 
             <div className={styles.link_element}>
@@ -66,15 +75,10 @@ const Signup = () => {
 
          <div className={styles.user}>
             {user?.email} &nbsp;&nbsp;&nbsp;
-            <button className={styles.signout} onClick={signout}> Отписване </button>
+            {!registered && (
+               <button className={styles.signout} onClick={signout}> Отписване </button>
+            )}
          </div>
-         <div>
-            <Link to="/">
-               <button className={styles.go_back} onClick={signout}>
-                  Назад
-               </button>
-            </Link>
-      </div>
       </div>
    );
 }

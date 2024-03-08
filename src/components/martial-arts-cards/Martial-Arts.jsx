@@ -131,6 +131,12 @@ const MartialArts = () => {
         "https://i.pinimg.com/236x/6c/fc/20/6cfc20be0fcd54792d2d16d3780baf9a.jpg",
       heading: "Tai chi",
     },
+    {
+      id: "card-21",
+      imageSrc:
+        "https://i.pinimg.com/236x/15/3c/28/153c2872f8913a3e15560cb28e388dd5.jpg",
+      heading: "Yoga",
+    },
   ];
 
   const filteredCards = martialArtsData.filter((card) =>

@@ -12,6 +12,9 @@ import Aikido_page from './pages/Aikido-page/Aikido-page';
 import Filter1 from './pages/Filtered-pages/Filter1/Filter1';
 import Filter2 from './pages/Filtered-pages/Filter2/Filter2';
 import Filter3 from './pages/Filtered-pages/Filter3/Filter3';
+import Filter4 from './pages/Filtered-pages/Filter4/Filter4';
+import Filter5 from './pages/Filtered-pages/Filter5/Filter5';
+import Filter6 from './pages/Filtered-pages/Filter6/Filter6';
 import Shiseikan from './pages/Shiseikan/Shiseikan';
 
 const App = () => {
@@ -19,16 +22,19 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/мartial аrts" element={<Martial />} />
         <Route path="/organisations" element={<Organisations />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
+        <Route path="/" element={<Signup />} />
         <Route path="/questions" element={<Questionnaire />} />
         <Route path="/aikido" element={<Aikido_page />} />
         <Route path="/filter1" element={<Filter1 />} />
         <Route path="/filter2" element={<Filter2 />} />
         <Route path="/filter3" element={<Filter3 />} />
+        <Route path="/filter4" element={<Filter4 />} />
+        <Route path="/filter5" element={<Filter5 />} />
+        <Route path="/filter6" element={<Filter6 />} />
         <Route path="/shiseikan" element={<Shiseikan />} />
       </Routes>
     </Router>
