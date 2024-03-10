@@ -1,6 +1,6 @@
 import React from 'react';
-import Navbar from '../../components/Navbar/Navbar.jsx';
-import Martial_Arts from '../../components/martial-arts-cards/Martial-Arts.jsx';
+import Navbar from '../../components/Navbar/Navbar';
+import Martial_Arts from '../../components/martial-arts-cards/Martial-Arts';
 import styles from './Martial.module.css';
 
 const Martial = () => {

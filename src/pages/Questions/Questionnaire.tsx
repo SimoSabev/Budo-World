@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Question from "../Questions/Question.jsx";
+import Question from "./Question.tsx";
 import styles from "./Questionnaire.module.css";
 import { Link, useNavigate } from "react-router-dom";
 

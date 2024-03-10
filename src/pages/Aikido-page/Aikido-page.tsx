@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './Aikido-page.module.css';
-import Navbar from '../../components/Navbar/Navbar.jsx';
-import History from '../../components/Aikido/History/History.jsx';
-import EmblaCarousel from '../../components/Aikido/organisation-cards/organisation-cards.jsx';
+import Navbar from '../../components/Navbar/Navbar';
+import History from '../../components/Aikido/History/History';
+import EmblaCarousel from '../../components/Aikido/organisation-cards/organisation-cards';
 
 const Aikido_page = () => {
   return (

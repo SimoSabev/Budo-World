@@ -7,7 +7,7 @@ const History = () => {
     <div className={styles.main}>
       <div className={styles.container}>
           <div >
-              <img className={`${styles.img} img`} src="Images/Shiseikan2.jpg" alt="" />
+              <img className={styles.img} src="Images/Shiseikan2.jpg" alt="" />
           </div>
 
           <div className={styles.contentContainer}>

@@ -1,9 +1,9 @@
 import React from "react";
-import Navbar from "../../../components/Navbar/Navbar.jsx";
-import Filter1_Cards from "../../../components/Filter-components/Filter1-cards.jsx";
+import Navbar from "../../../components/Navbar/Navbar";
+import Filter3_Cards from "../../../components/Filter-components/Filter3-cards";
 import styles from "../../Martial-Arts/Martial.module.css";
 
-const Filter1 = () => {
+const Filter3 = () => {
   return (
     <div className={styles.Container}>
       <div>
@@ -11,11 +11,11 @@ const Filter1 = () => {
           <Navbar />
         </div>
         <div>
-          <Filter1_Cards />
+          <Filter3_Cards />
         </div>
       </div>
     </div>
   );
 };
 
-export default Filter1;
+export default Filter3;

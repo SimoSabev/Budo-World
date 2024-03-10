@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {ChangeEvent, useState} from "react";
 import styles from "./organisation-cards.module.css";
 import { Link } from "react-router-dom";
 
