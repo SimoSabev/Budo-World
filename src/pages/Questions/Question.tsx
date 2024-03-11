@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import styles from './Questions.module.css';
 
-const Question = ({ id, text, options, onAnswer }) => {
-    const [selectedAnswer, setSelectedAnswer] = useState(null);
+export default function Question({ id, text, options, onAnswer }: {id: number, text: string, options: {option: string, points: number}[], onAnswer: (id: number, optionsIndex: number) => void}) { // TODO: TYPE
+    const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
   
-    const handleOptionClick = (optionIndex) => {
+    const handleOptionClick = (optionIndex: number) => {
       setSelectedAnswer(optionIndex);
       onAnswer(id, optionIndex);
     };
@@ -17,15 +17,13 @@ const Question = ({ id, text, options, onAnswer }) => {
               <li
                 className={styles.questions}
                 key={index}
-                style={{ textDecoration: selectedAnswer === index }}
+                style={{ textDecoration: selectedAnswer === index ? "none" : undefined }}
                 onClick={() => handleOptionClick(index)}
               >
-            {option}
+            {option.option}
               </li>
             ))}
         </ul>
       </div>
     );
   };
-  
-  export default Question;

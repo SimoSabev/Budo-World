@@ -1,21 +1,11 @@
 import React from 'react';
-import Navbar from '../../components/Navbar/Navbar';
 import HeaderMain from '../../components/Header-Main/Header-Main';
-import styles from './Home.module.css';
+import GlobalLayout from "../../components/layouts/globalLayout/globalLayout";
 
-const Home = () => {
+export default function Home() {
   return (
-    <div className={styles.Container}>
-      <div>
-          <div>
-              <Navbar/>
-          </div>
-          <div>
-              <HeaderMain/>
-          </div>
-      </div>
-    </div>
+      <GlobalLayout>
+          <HeaderMain/>
+      </GlobalLayout>
   )
 }
-
-export default Home;

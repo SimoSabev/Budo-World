@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { onAuthStateChanged, signInWithEmailAndPassword, signOut } from 'firebase/auth';
-import { auth } from '../../firebase-config';
+import { auth } from '../../../firebase-config';
 import styles from './Login.module.css';
 
 const Login = () => {
   const [loginEmail, setLoginEmail] = useState('');
   const [loginPassword, setLoginPassword] = useState('');
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState<any>(null); // TODO: Make it a type dependent
   const [loggedIn, setLoggedIn] = useState(false);
 
   useEffect(() => {
@@ -24,7 +24,7 @@ const Login = () => {
       const user = userCredential.user;
       console.log(user);
       setLoggedIn(true); // Set loggedIn state to true after successful login
-    } catch (error) {
+    } catch (error: any) {     // TODO: Make it a type dependent
       console.error(error.message);
     }
   };
@@ -33,7 +33,7 @@ const Login = () => {
     try {
       await signOut(auth);
       setLoggedIn(false); // Set loggedIn state to false after signout
-    } catch (error) {
+    } catch (error: any) {      // TODO: Make it a type dependent
       console.error(error.message);
     }
   };

@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { createUserWithEmailAndPassword, onAuthStateChanged, signOut } from 'firebase/auth';
-import { auth } from "../../firebase-config";
+import { auth } from "../../../firebase-config";
 import styles from './Signup.module.css';
 
-const Signup = () => {
+export default function Signup() {
    const [registerEmail, setRegisterEmail] = useState('');
    const [registerPassword, setRegisterPassword] = useState('');
-   const [user, setUser] = useState(null);
+   const [user, setUser] = useState<any>(null);
    const [registered, setRegistered] = useState(false);
 
    useEffect(() => {
@@ -24,7 +24,7 @@ const Signup = () => {
          const user = userCredential.user;
          console.log(user);
          setRegistered(true); // Set registered state to true after successful signup
-      } catch (error) {
+      } catch (error: any) { // TODO: Make it a type dependent
          console.error(error.message);
       }
    };
@@ -32,7 +32,7 @@ const Signup = () => {
    const signout = async () => {
       try {
          await signOut(auth);
-      } catch (error) {
+      } catch (error: any) { // TODO: Make it a type dependent
          console.error(error.message);
       }
    };
@@ -82,5 +82,3 @@ const Signup = () => {
       </div>
    );
 }
-
-export default Signup;

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {ChangeEvent, useState} from "react";
 import Card from "../martial-arts-cards/martial-arts-cards";
 import styles from "../../components/martial-arts-cards/Martial-Arts.module.css";
 import { Link } from "react-router-dom";
@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const Filter1_Cards = () => {
   const [searchTerm, setSearchTerm] = useState("");
 
-  const handleSearchChange = (e) => {
+  const handleSearchChange = (e: ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(e.target.value);
   };
 

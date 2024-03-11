@@ -1,6 +1,0 @@
-.container {
-    background-color: #202020;
-    width: 100vw;
-    height: 130%; /* Updated to 100vh to cover the entire viewport height */
-    max-width: 100vw;
-}

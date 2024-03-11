@@ -1,8 +1,9 @@
 import React from 'react';
 import { Tilt } from 'react-tilt';
 import styles from './martial-arts-cards.module.css';
+import {IMartialArtCard} from "../../Models/MartialArtCard";
 
-const Card = ({ id, imageSrc, smallText, heading, type }) => {
+const Card = ({ id, imageSrc, smallText, heading, type }: IMartialArtCard | {id: string, imageSrc: string, heading: string, smallText?: string, type?: string[]}) => {
   return (
       <Tilt className={`${styles.card} ${styles.rounded}`} options={{ max: 25, scale: 1.05, speed: 400 }}>
         <div id={id}>
