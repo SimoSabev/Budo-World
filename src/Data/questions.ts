@@ -7,7 +7,8 @@ export const questions: IQuestion[] = [
         options: [
             {
                 option: "Самозащита",
-                points: 0
+                points: 0,
+                // type: ["self-defence"]
             },
             {
                 option: "Здраве",
@@ -33,7 +34,8 @@ export const questions: IQuestion[] = [
             },
             {
                 option: "Бойни спортове",
-                points: 500
+                points: 500,
+                //type: ["combat-sport"]
             },
             {
                 option: "Бойни изкуства с оръжия",
@@ -55,7 +57,8 @@ export const questions: IQuestion[] = [
             },
             {
                 option: "Задържащи",
-                points: 50
+                points: 50,
+                // type: ["grappling"]
             },
             {
                 option: "Заключващи/контролиращи",
@@ -63,26 +66,28 @@ export const questions: IQuestion[] = [
             }
         ]
     },
-    {
-        id: 1,
-        question: "За какво време бихте се занимавали?",
-        options: [
-            {
-                option: "3 месеца",
-                points: 0
-            },
-            {
-                option: "6 месеца",
-                points: 0
-            },
-            {
-                option: "1 година",
-                points: 0
-            },
-            {
-                option: "над 1 година",
-                points: 0
-            }
-        ]
-    }
+
+    // resultType: ["self-defence", "combat-sport", "grappling"]
+    // {
+    //     id: 4,
+    //     question: "За какво време бихте се занимавали?",
+    //     options: [
+    //         {
+    //             option: "3 месеца",
+    //             points: 0
+    //         },
+    //         {
+    //             option: "6 месеца",
+    //             points: 0
+    //         },
+    //         {
+    //             option: "1 година",
+    //             points: 0
+    //         },
+    //         {
+    //             option: "над 1 година",
+    //             points: 0
+    //         }
+    //     ]
+    // }
 ]

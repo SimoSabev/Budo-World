@@ -3,6 +3,7 @@ export interface IQuestion {
     question: string;
     options: {
         option: string,
-        points: number
+        points: number,
+        // resultType: string[]
     }[];
 }

@@ -11,7 +11,6 @@ const Aikido_page = () => {
               <EmblaCarousel/>
           </div>
       </GlobalLayout>
-
   )
 }
 
