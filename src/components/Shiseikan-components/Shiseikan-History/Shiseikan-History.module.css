@@ -1,0 +1,96 @@
+.img {
+    width: 25%;
+    height: auto;
+    position: relative;
+    left: 37%;
+}
+
+.header_group {
+    display: flex;
+    flex-direction: column; /* Change to column layout */
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust height as needed */
+}
+
+.header {
+    font-size: xxx-large;
+    color: white;
+    font-family: 'Russo One', sans-serif;
+    position: relative;
+    top: 8vh; /* Add margin to separate from image */
+}
+
+.image_group {
+    position: relative;
+    left: 20vh;
+    top: 8vh;
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    max-width: calc(100vw - 40vh); 
+    overflow-x: hidden; 
+}
+
+.images {
+    position: relative;
+    width: 31%;
+    height: auto;
+    margin: 1vh;
+}
+.video_group {
+    position: relative;
+    top: 40vh;
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    align-items: center;
+}
+.video {
+    margin: 1% ;
+}
+.history_group {
+    background-color: rgb(56, 56, 56);
+    width: 75vw;
+    height: 55vh;
+    position: relative;
+    left: 14%;
+    top: 50vh;
+    border-radius: 2vh;
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    align-items: center;    
+}
+.history {
+    margin: 5vh;
+    width: auto;
+    font-size: x-large;
+    color: rgb(255, 252, 252);
+}
+
+.button_group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Add this */
+}
+.button {
+    position: relative;
+    width: 18vw;
+    height: 8vh;
+    top: 75vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2vh;
+    font-size: 1.5em;
+    font-family: 'Russo One', sans-serif;
+    background-color: orangered;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.959)
+}
+.button:hover {
+    background-color: rgb(241, 102, 60);
+}
