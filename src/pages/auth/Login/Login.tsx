@@ -59,7 +59,7 @@ const Login = () => {
             }}
           />
           {loggedIn ? (
-            <Link to="/home">
+            <Link to="/">
               <button className={styles.button}>
                 Продължете напред
               </button>
@@ -73,7 +73,7 @@ const Login = () => {
 
         <div className={styles.link_element}>
           <p className={styles.link1}>Нямате акаунт? </p>
-          <Link className={styles.link2} to="/">
+          <Link className={styles.link2} to="/auth/signup">
             Регистрирай се
           </Link>
         </div>

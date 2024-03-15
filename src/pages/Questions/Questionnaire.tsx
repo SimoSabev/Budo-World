@@ -48,7 +48,7 @@ export default function Questionnaire () {
 
   return (
     <div className={styles.main_container}>
-      <Link to="/home">
+      <Link to="/">
         <div>
           <button type="button" className={styles.back_button}>
             Назад
@@ -69,7 +69,7 @@ export default function Questionnaire () {
           ) : (
             <div className={styles.result_container}>
               <h2>Не успяхме да намерим подходящи предложения за Вас</h2>
-              <Link className={styles.link_button} to={"/мartial аrts"}>
+              <Link className={styles.link_button} to={"/martial-arts"}>
                 Към всички предложения
               </Link>
             </div>

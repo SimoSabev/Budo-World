@@ -59,7 +59,7 @@ export default function Signup() {
                />
                {!registered && <button className={styles.button} onClick={signup}> Създай профил</button>}
                {registered && (
-                  <Link to="/home">
+                  <Link to="/martial-arts">
                      <button className={styles.button}>
                         Напред
                      </button>
@@ -69,7 +69,7 @@ export default function Signup() {
 
             <div className={styles.link_element}>
                <p className={styles.link1}>Вече имате акаунт? </p>
-               <Link className={styles.link2} to="/login">Впиши се</Link>
+               <Link className={styles.link2} to="/auth/login">Впиши се</Link>
             </div>
          </div>
 
