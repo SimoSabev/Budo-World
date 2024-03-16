@@ -10,17 +10,16 @@ import Signup from './pages/auth/Signup/Signup';
 import Questionnaire from './pages/Questions/Questionnaire';
 import DetailedMartialArt from "./pages/Martial-Arts/DetailedMartialArt";
 import DetailedOrganisation from "./pages/Organisations/DetailedOrganisation";
-import Aikido_page from "./pages/Aikido-page/Aikido-page";
+import PageNotFound from "./pages/PageNotFound/PageNotFound";
 
 export default function App() {
 
   return (
     <Router>
       <Routes>
-        <Route path={"/"} index={true} element={<Home />} />
+        <Route index={true} element={<Home />} />
 
         <Route path={"/martial-arts"} element={<MartialArts />} />
-        <Route path={"/martial-arts/aikido"} element={<Aikido_page />}/>
         <Route path={"/martial-arts/:martialArtName"} element={<DetailedMartialArt />}/>
 
         <Route path={"/organisations"} element={<Organisations />} />
@@ -32,6 +31,9 @@ export default function App() {
         </Route>
 
         <Route path={"/questions"} element={<Questionnaire />} />
+
+        <Route path={"/404"} element={<PageNotFound />}/>
+        <Route path={"/*"} element={<PageNotFound />}/>
       </Routes>
     </Router>
   );
