@@ -91,7 +91,7 @@ export const detailedMartialArts: {
           city: "Варна",
           imageSrc:
             "https://dreamvarna.com/wp-content/uploads/2023/07/IMG-20230628-WA0062-150x150.jpg",
-          route: "dream_varna",
+          route: "dream-varna",
         },
       ],
     },
@@ -111,7 +111,7 @@ export const detailedMartialArts: {
           city: "Варна",
           imageSrc:
             "https://www.vokil-bg.com/wp-content/uploads/2014/04/statia1-298x167.jpg",
-          route: "vokil_muay_thai",
+          route: "vokil-muay-thai",
         },
       ],
     },
@@ -131,7 +131,7 @@ export const detailedMartialArts: {
           city: "Варна",
           imageSrc:
             "https://scontent.fsof8-1.fna.fbcdn.net/v/t39.30808-6/420062461_1151779716194874_5783122709186778907_n.jpg?stp=c0.23.206.206a_cp6_dst-jpg_p206x206&_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_ohc=fzrNND8I-wwAX8lryY-&_nc_ht=scontent.fsof8-1.fna&oh=00_AfD5-_6ijmY5UcamVBiDtQotnCnfVOcztl4QrnXMZxbdBg&oe=65F73013",
-          route: "wrestling_lokomotiv93",
+          route: "wrestling-lokomotiv93",
         },
       ],
     },
@@ -151,7 +151,7 @@ export const detailedMartialArts: {
           city: "Варна",
           imageSrc:
             "https://tkdodesos.bg/media/2020/09/taekwondo-club-odesos-varna-training-768x512.jpg",
-          route: "taekwondo_odesos",
+          route: "taekwondo-odesos",
         },
       ],
     },
@@ -171,7 +171,7 @@ export const detailedMartialArts: {
           city: "Варна",
           imageSrc:
             "https://police-karate.com/wp-content/uploads/2019/09/IMG_1351.jpg",
-          route: "police_kara te",
+          route: "police-karate",
         },
       ],
     },
@@ -191,7 +191,7 @@ export const detailedMartialArts: {
           city: "Варна",
           imageSrc:
             "https://scontent.fsof8-1.fna.fbcdn.net/v/t39.30808-6/358469233_730959748836330_3636881511615267862_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=5f2048&_nc_ohc=7Hn8Fbkr4EIAX-jVPF4&_nc_ht=scontent.fsof8-1.fna&oh=00_AfC6YrH0X8CkvtwVzU9OeRZ_HO1D2sSXxqdMtYuuhNuCZw&oe=65FACD37",
-          route: "kaiseikan_iaido",
+          route: "kaiseikan-iaido",
         },
       ],
     },
@@ -211,7 +211,7 @@ export const detailedMartialArts: {
           city: "Варна",
           imageSrc:
             "https://mma-varna.ucoz.com/_ph/1/455780554.jpg",
-          route: "mma_varna",
+          route: "mma-varna",
         },
       ],
     },
@@ -231,7 +231,7 @@ export const detailedMartialArts: {
           city: "Варна",
           imageSrc:
             "https://scontent.fsof11-1.fna.fbcdn.net/v/t1.18169-9/1919127_100879883281139_6596421_n.jpg?stp=c34.0.206.206a_dst-jpg_p206x206&_nc_cat=101&ccb=1-7&_nc_sid=5f2048&_nc_ohc=-sJRubGSd3gAX9eQYp-&_nc_ht=scontent.fsof11-1.fna&oh=00_AfD7pEXyJVNQmH91J13LfDEbOqf1Xg5V1XcPCoQFI9uPBA&oe=661D631D",
-          route: "sk_judo",
+          route: "sk-judo",
         },
       ],
     },
@@ -251,15 +251,15 @@ export const detailedMartialArts: {
           city: "Варна",
           imageSrc:
             "https://bjj-varna.com/wp-content/uploads/2018/01/20046385_10213702392182730_9183179174946048024_n-1.jpg",
-          route: "bruno_bastos_bjj",
+          route: "bruno-bastos-bjj",
         },
       ],
     },
   },
   {
-    name: "wing_chun",
+    name: "wing-chun",
     data: {
-      route: "wing_chun",
+      route: "wing-chun",
       history:
         "Винг Чун, Уинчун, Юнчун  е китайско бойно изкуство, възникнало в Южен Китай. Този боен стил е особено ефективен при близък бой и се определя от пестеливи движения, устойчиви пози и практична насоченост, като техниките му са построени на желязна логика.",
       heading: "Винг Чун",
@@ -271,15 +271,15 @@ export const detailedMartialArts: {
           city: "Варна",
           imageSrc:
             "https://explosives-wing-chun-varna.com/wp-content/uploads/2023/10/explosives_wing_chun_training.jpg",
-          route: "wing_chun_varna",
+          route: "wing-chun-varna",
         },
       ],
     },
   },
   {
-    name: "kung_fu",
+    name: "kung-fu",
     data: {
-      route: "kung_fu",
+      route: "kung-fu",
       history:
         "Таекуондо е вид източно бойно изкуство, развило се в Корея. Негов създател е генерал Чой Хонг Хи (1918 – 2002).Двете най-големи таекуондо организации са Световната федерация по таекуондо (WT), която е създадена през 1973 г. и е със седалище в Южна Корея и Международната федерация по таекуондо (ITF) – със седалища в Северна Корея, Канада и Испания. Съществува Българска федерация по олимпийско таекуондо(стил WT), Българска таекуондо федерация стил ITF и Българска асоциация по таекуондо (БАТ).",
       heading: "Кунг Фу",
@@ -291,7 +291,7 @@ export const detailedMartialArts: {
           city: "Варна",
           imageSrc:
             "https://scontent.fsof8-1.fna.fbcdn.net/v/t39.30808-6/309461318_474214441401962_3151039630423152959_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=5wqt9wVNWa0AX_faHl9&_nc_ht=scontent.fsof8-1.fna&oh=00_AfCBMrP39-5koObALkbvYnghV3XR8t704bO6dX4Q9bwkjQ&oe=65FB67A1",
-          route: "kung_fu_varna",
+          route: "kung-fu-varna",
         },
       ],
     },
@@ -311,15 +311,15 @@ export const detailedMartialArts: {
           city: "Варна",
           imageSrc:
             "https://scontent.fsof8-1.fna.fbcdn.net/v/t39.30808-6/358469233_730959748836330_3636881511615267862_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=5f2048&_nc_ohc=7Hn8Fbkr4EIAX-jVPF4&_nc_ht=scontent.fsof8-1.fna&oh=00_AfC6YrH0X8CkvtwVzU9OeRZ_HO1D2sSXxqdMtYuuhNuCZw&oe=65FACD37",
-          route: "kaiseikan_iaido",
+          route: "kaiseikan-iaido",
         },
       ],
     },
   },
   {
-    name: "tai_chi",
+    name: "tai-chi",
     data: {
-      route: "tai_chi",
+      route: "tai-chi",
       history:
         "Тайдзи цюен или като тайчи чуан е китайско бойно изкуство от семейството на вътрешните стилове на Ушу, заедно с Ба гуа джан и Син И цюан.",
       heading: "Тай Чи",
@@ -331,7 +331,7 @@ export const detailedMartialArts: {
           city: "Варна",
           imageSrc:
             "https://scontent.fsof11-1.fna.fbcdn.net/v/t1.6435-9/60223182_10216920364173945_8982431393820704768_n.jpg?stp=c79.0.206.206a_dst-jpg_p206x206&_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_ohc=dviTHdPzNa0AX_WHZPa&_nc_oc=AQn-KKymfX9g9fCEkIx7eLlRg3M2wrSiZ55mgAwHbzplIVUSZviq0iZqk1iq54ff7xw&_nc_ht=scontent.fsof11-1.fna&oh=00_AfD_LJ-rQPd9D2xdhMF-3NYrZUD19x3V0Wz1O6oBr0h8Ow&oe=661D8036",
-          route: "tai_chi",
+          route: "tai-chi",
         },
       ],
     },
@@ -351,7 +351,7 @@ export const detailedMartialArts: {
           city: "Варна",
           imageSrc:
             "https://3.bp.blogspot.com/-JyfO-ev81mI/VkB1HjkDlHI/AAAAAAAAAj0/bVDXuxCaA1s/s320/11260479_839604296147854_680081239718457257_n.jpg",
-          route: "yoga_varna",
+          route: "yoga-varna",
         },
       ],
     },
