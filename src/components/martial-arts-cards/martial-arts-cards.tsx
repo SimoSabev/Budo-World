@@ -3,22 +3,20 @@ import { Tilt } from 'react-tilt';
 import styles from './martial-arts-cards.module.css';
 import {IMartialArtCard} from "../../Models/MartialArtCard";
 
-const Card = ({ id, imageSrc, smallText, heading, type }: IMartialArtCard | {id: string, imageSrc: string, heading: string, smallText?: string, type?: string[]}) => {
+export default function Card({currentMartialArt}: {currentMartialArt: IMartialArtCard}) {
   return (
-      <Tilt className={`${styles.card} ${styles.rounded}`} options={{ max: 25, scale: 1.05, speed: 400 }}>
-        <div id={id}>
+      <Tilt className={`${styles.card}`} options={{ max: 25, scale: 1.05, speed: 400 }}>
+        <div id={currentMartialArt.id}>
           <div className={styles.cardOverlay}></div>
           <div className={styles.cardImage}>
-            <img src={imageSrc} alt="" />
+            <img src={currentMartialArt.imageSrc} alt="" />
           </div>
           
           <div className={styles.cardHeading}>
-            <span className={styles.small}>{smallText}</span>
-            <h2>{heading}</h2>
+            {/*<span className={styles.small}>{smallText}</span>*/}
+            <h2>{currentMartialArt.heading}</h2>
           </div>
         </div>
       </Tilt>
   );
 };
-
-export default Card;

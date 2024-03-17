@@ -43,32 +43,32 @@ const Filter5_Cards = () => {
 
   return (
     <div className={styles.body}>
-      {/* Search Bar */}
-      <input
-        className={styles.search_bar}
-        type="text"
-        placeholder="Search martial arts..."
-        value={searchTerm}
-        onChange={handleSearchChange}
-      />
-      <div className={styles.main}>
-        <div className={styles.container}>
-          {/* Map through rows and display each row */}
-          {rows.map((row, rowIndex) => (
-            <section key={rowIndex} className={styles.section}>
-              {row.map((card) => (
-                <Link key={card.id} to={`/${card.heading.toLowerCase()}`}>
-                  <Card
-                    id={card.id}
-                    imageSrc={card.imageSrc}
-                    heading={card.heading}
-                  />
-                </Link>
-              ))}
-            </section>
-          ))}
-        </div>
-      </div>
+      {/*/!* Search Bar *!/*/}
+      {/*<input*/}
+      {/*  className={styles.search_bar}*/}
+      {/*  type="text"*/}
+      {/*  placeholder="Search martial arts..."*/}
+      {/*  value={searchTerm}*/}
+      {/*  onChange={handleSearchChange}*/}
+      {/*/>*/}
+      {/*<div className={styles.main}>*/}
+      {/*  <div className={styles.container}>*/}
+      {/*    /!* Map through rows and display each row *!/*/}
+      {/*    {rows.map((row, rowIndex) => (*/}
+      {/*      <section key={rowIndex} className={styles.section}>*/}
+      {/*        {row.map((card) => (*/}
+      {/*          <Link key={card.id} to={`/${card.heading.toLowerCase()}`}>*/}
+      {/*            <Card*/}
+      {/*              id={card.id}*/}
+      {/*              imageSrc={card.imageSrc}*/}
+      {/*              heading={card.heading}*/}
+      {/*            />*/}
+      {/*          </Link>*/}
+      {/*        ))}*/}
+      {/*      </section>*/}
+      {/*    ))}*/}
+      {/*  </div>*/}
+      {/*</div>*/}
     </div>
   );
 };

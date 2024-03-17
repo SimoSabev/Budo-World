@@ -3,6 +3,6 @@ export interface IMartialArtCard {
     heading: string;
     imageSrc: string;
     type: string[];
-    smallText?: string;  // TODO: Make it defined
+    // smallText?: string;  // TODO: Make it defined
     route: string;
 }
