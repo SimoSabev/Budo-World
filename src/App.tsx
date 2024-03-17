@@ -3,12 +3,12 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from './pages/Home/Home'; 
-import MartialArts from './pages/Martial-Arts/MartialArts';
+import MartialArts from './pages/MartialArts/MartialArts';
 import Organisations from './pages/Organisations/Organisations'
 import Login from './pages/auth/Login/Login';
 import Signup from './pages/auth/Signup/Signup';
 import Questionnaire from './pages/Questions/Questionnaire';
-import DetailedMartialArt from "./pages/Martial-Arts/DetailedMartialArt";
+import DetailedMartialArt from "./pages/MartialArts/DetailedMartialArt";
 import DetailedOrganisation from "./pages/Organisations/DetailedOrganisation";
 import PageNotFound from "./pages/PageNotFound/PageNotFound";
 

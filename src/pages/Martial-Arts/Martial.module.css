@@ -1,8 +1,0 @@
-.Container{
-    background: url('https://img.freepik.com/free-photo/abstract-textured-backgound_1258-30461.jpg') center/cover no-repeat;
-    display: flex;
-    justify-content: center;
-    width: 100vw;
-    height: 120%; /* Updated to 100vh to cover the entire viewport height */
-    max-width: 100vw;
-}
