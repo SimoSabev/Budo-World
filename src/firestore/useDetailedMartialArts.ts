@@ -3,7 +3,7 @@ import {doc, getDoc, setDoc} from "firebase/firestore";
 import {MartialArtsDetailedCollection} from "./collections";
 import {IDetailedMartialArtMap} from "../Models/martial-arts/IDetailedMartialArt";
 
-export default function useDetailedMartialArt(name: string) {
+export default function useDetailedMartialArts() {
     const navigate = useNavigate();
 
     const set = (detailedMartialArt: IDetailedMartialArtMap) =>
@@ -15,11 +15,11 @@ export default function useDetailedMartialArt(name: string) {
         );
 
 
-    const get = async () => {
+    const get = async (route: string) => {
         const data = await getDoc(
             doc(
                 MartialArtsDetailedCollection,
-                name)
+                route)
         );
 
         if (!data.exists()) navigate("/404");

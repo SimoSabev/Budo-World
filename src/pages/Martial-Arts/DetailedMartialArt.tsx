@@ -8,13 +8,13 @@ export default function DetailedMartialArt() {
 
     const { martialArtName } = useParams<string>();
 
-    const {get: getDetailedMartialArt } = useDetailedMartialArt(martialArtName!);
+    const {get: getDetailedMartialArt } = useDetailedMartialArt();
 
     const [currentDetailedMartialArt, setCurrentDetailedMartialArt] = useState<IDetailedMartialArt>()
 
 
     useEffect(() => {
-        getDetailedMartialArt().then((data) => setCurrentDetailedMartialArt(data))
+        getDetailedMartialArt(martialArtName!).then((data) => setCurrentDetailedMartialArt(data))
     }, []);
 
 
