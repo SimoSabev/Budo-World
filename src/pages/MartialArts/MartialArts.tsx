@@ -52,13 +52,11 @@ export default function Martial() {
                 <div>
                     {/* Map through rows and display each row */}
                     {rows.map((row, rowIndex) => (
-                        <section key={rowIndex} className={styles.section}>
-                            {row.map((card) => (
-                                <Link key={card.id} to={`${card.route}`}>
-                                    <Card currentMartialArt={card}/>
-                                </Link>
+                        <div key={rowIndex} className={styles.section}>
+                            {row.map((card, cardIndex) => (
+                                <Card currentMartialArt={card} key={rowIndex + cardIndex}/>
                             ))}
-                        </section>
+                        </div>
                     ))}
                 </div>
             </div>
