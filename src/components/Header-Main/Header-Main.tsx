@@ -39,6 +39,9 @@ const HeaderMain = () => {
         <div className={styles.Image}>
           <img className={styles.img} src="https://cdn.discordapp.com/attachments/1171074802816126996/1206328492527198290/bushido_1.png?ex=65db9bf5&is=65c926f5&hm=8d13626fe0b59a7ae4cc74100b9a8ac7e0d7c276aafa32c3a0b63a29f1889977&" alt="" />
         </div>
+
+
+        
     </div>
   );
 };
