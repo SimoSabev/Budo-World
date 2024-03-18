@@ -31,28 +31,28 @@ export default function Martial() {
 
     return (
         <GlobalLayout>
-            <div>
+            <div className={styles.container}>
                 {/* Search Bar */}
-                <input
-                    className={styles.search_bar}
-                    type="text"
-                    placeholder="Search martial arts..."
-                    value={searchTerm}
-                    onChange={handleSearchChange}
-                />
-                <div className={styles.main}>
-                    <div className={styles.container}>
-                        {/* Map through rows and display each row */}
-                        {rows.map((row, rowIndex) => (
-                            <section key={rowIndex} className={styles.section}>
-                                {row.map((card) => (
-                                    <Link key={card.id} to={`${card.route}`}>
-                                        <Card currentMartialArt={card}/>
-                                    </Link>
-                                ))}
-                            </section>
-                        ))}
-                    </div>
+                <div className={styles.search_bar_wrapper}>
+                    <input
+                        className={styles.search_bar}
+                        type="text"
+                        placeholder="Search martial arts..."
+                        value={searchTerm}
+                        onChange={handleSearchChange}
+                    />
+                </div>
+                <div>
+                    {/* Map through rows and display each row */}
+                    {rows.map((row, rowIndex) => (
+                        <section key={rowIndex} className={styles.section}>
+                            {row.map((card) => (
+                                <Link key={card.id} to={`${card.route}`}>
+                                    <Card currentMartialArt={card}/>
+                                </Link>
+                            ))}
+                        </section>
+                    ))}
                 </div>
             </div>
         </GlobalLayout>

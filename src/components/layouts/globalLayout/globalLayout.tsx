@@ -9,7 +9,7 @@ export default function GlobalLayout({children}: {children: JSX.Element}) {
                 <div>
                     <Navbar/>
                 </div>
-                <div>
+                <div className={styles.centerContent}>
                     {children}
                 </div>
             </div>

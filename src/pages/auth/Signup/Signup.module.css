@@ -1,9 +1,8 @@
 .app {
   margin: auto;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  background-image: url('https://cdn.discordapp.com/attachments/1171074802816126996/1206333931767599175/solid-concrete-wall-textured-backdrop.jpg?ex=65dba105&is=65c92c05&hm=a3d241da256d4dba6a3e60d620e16634b762f15b1b8707e1d963617c18e804cb&');
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: url('https://i.pinimg.com/564x/75/f0/97/75f0977e5d87b8fda51fafc4c2198cef.jpg') center/cover fixed no-repeat;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
