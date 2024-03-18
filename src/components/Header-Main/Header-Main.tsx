@@ -37,7 +37,7 @@ const HeaderMain = () => {
       </div>
 
         <div className={styles.Image}>
-          <img className={styles.img} src="https://cdn.discordapp.com/attachments/1171074802816126996/1206328492527198290/bushido_1.png?ex=65db9bf5&is=65c926f5&hm=8d13626fe0b59a7ae4cc74100b9a8ac7e0d7c276aafa32c3a0b63a29f1889977&" alt="" />
+          <img className={styles.img} src="https://cdn.discordapp.com/attachments/1171074802816126996/1206328492527198290/bushido_1.png?ex=6609c075&is=65f74b75&hm=6bc4de5d0133c0fc80fd74dac119d8fe4b3c8c5baef01533c892091ee4426e7e&" alt="" />
         </div>
 
 
