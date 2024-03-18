@@ -1,22 +1,18 @@
 .card {
-  position: relative;
   width: 16vw;
   height: 32.2vh;
   border-radius: 1.8vh;
   margin: 1.1vh;
-  background: #CCC;
   transform: rotateX(0) rotateY(0);
   transform-style: preserve-3d;
   transition-duration: 0.1s;
   transition-timing-function: ease !important;
   backface-visibility: hidden;
   will-change: transform;
-  
 }
 
 .cardOverlay {
   border-radius: 1.8vh;
-  position: absolute;
   left: 0;
   top: 0;
   width: 100%;
@@ -36,37 +32,7 @@
 }
 
 .cardHeading {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #FFF;
-}
-
-
-.cardHeading h2 {
-  margin: 0;
-  transform: translateZ(30px);
-}
-
-.card.is-out {
-  
-  transform: rotateX(0) rotateY(0) !important;
-  transition-duration: 1s;
-}
-
-#card-1 {
-  background-color: #424242;
-}
-
-#card-2 {
-  background-color: #424242;
-}
-
-#card-3 {
-  background-color: #424242;
-}
-
-#card-4 {
-  background-color: #424242;
 }
