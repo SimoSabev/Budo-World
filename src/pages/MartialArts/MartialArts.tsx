@@ -1,4 +1,4 @@
-import React, {ChangeEvent, useEffect, useState} from 'react';
+import React, {ChangeEvent, useEffect, useRef, useState} from 'react';
 import GlobalLayout from "../../components/layouts/globalLayout/globalLayout";
 import {Link, useSearchParams} from "react-router-dom";
 import {martialArtsData} from "../../Data/martial-arts";
@@ -11,17 +11,20 @@ export default function Martial() {
 
     const [searchTerm, setSearchTerm] = useState("");
 
+    const mounted = useRef(false);
+
     useEffect(() => {
         setSearchParams({search: searchTerm})
+        if (!mounted.current) {
+            if (searchParams.get("search") && searchParams.get("search") !== "")
+                setSearchTerm(() => searchParams.get("search")!);
+            mounted.current = true;
+        }
+
+        setSearchParams(() => ({search: searchTerm}));
     }, [searchTerm]);
 
-    const handleSearchChange = (e: ChangeEvent<HTMLInputElement>) => {
-        setSearchTerm(e.target.value);
-    };
-
-    const filteredCards = martialArtsData.filter((card) =>
-        card.heading.toLowerCase().includes(searchTerm.toLowerCase())
-    );
+    const handleSearchChange = (e: ChangeEvent<HTMLInputElement>) => setSearchTerm(e.target.value);
 
     // Split the cards into rows of 4
     const rows = [];
