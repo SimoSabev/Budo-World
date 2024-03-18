@@ -1,20 +1,23 @@
 import React, {ChangeEvent, useEffect, useRef, useState} from 'react';
 import GlobalLayout from "../../components/layouts/globalLayout/globalLayout";
 import {Link, useSearchParams} from "react-router-dom";
-import {martialArtsData} from "../../Data/martial-arts";
 import styles from "./Martial.module.css";
 import Card from "../../components/martial-arts-cards/martial-arts-cards";
+import useMartialArtCards from "../../firestore/useMartialArtCards";
+import {IMartialArtCard} from "../../Models/MartialArtCard";
 
 export default function Martial() {
 
     const [searchParams, setSearchParams] = useSearchParams();
 
     const [searchTerm, setSearchTerm] = useState("");
+    const [filteredCards, setFilteredCards] = useState<IMartialArtCard[]>([]);
 
     const mounted = useRef(false);
 
+    const {getFiltered} = useMartialArtCards();
+
     useEffect(() => {
-        setSearchParams({search: searchTerm})
         if (!mounted.current) {
             if (searchParams.get("search") && searchParams.get("search") !== "")
                 setSearchTerm(() => searchParams.get("search")!);
@@ -22,6 +25,7 @@ export default function Martial() {
         }
 
         setSearchParams(() => ({search: searchTerm}));
+        getFiltered(searchTerm).then((r) => setFilteredCards(r))
     }, [searchTerm]);
 
     const handleSearchChange = (e: ChangeEvent<HTMLInputElement>) => setSearchTerm(e.target.value);

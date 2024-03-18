@@ -1,12 +1,12 @@
 import {useNavigate} from "react-router-dom";
-import {doc, getDoc, setDoc} from "firebase/firestore";
+import {doc, getDoc, setDoc, getDocs} from "firebase/firestore";
 import {MartialArtsCardsCollection} from "./collections";
 import {IMartialArtCard} from "../Models/MartialArtCard";
 
 export default function useMartialArtCards() {
     const navigate = useNavigate();
 
-    const set = (martialArtCard: IMartialArtCard) => setDoc(
+    const setOne = (martialArtCard: IMartialArtCard) => setDoc(
         doc(
             MartialArtsCardsCollection,
             martialArtCard.route
@@ -14,7 +14,7 @@ export default function useMartialArtCards() {
         martialArtCard
     );
 
-    const get = async (route: string) => {
+    const getOne = async (route: string) => {
         const data = await getDoc(
             doc(
                 MartialArtsCardsCollection,
@@ -25,5 +25,19 @@ export default function useMartialArtCards() {
         return data.data();
     }
 
-    return {get, set}
+    const getAll = () => getDocs(MartialArtsCardsCollection);
+
+
+    const getFiltered = async (searchTerm: string) =>
+        (await getAll()).docs
+            .map((martialArtsData) =>
+                martialArtsData.data()
+            ).filter((martialArtCard) =>
+            martialArtCard.heading.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            martialArtCard.route.toLowerCase().includes(searchTerm.toLowerCase())
+        ).sort((a, b) =>
+            a.heading.localeCompare(b.heading)
+        );
+
+    return {getOne, setOne, getAll, getFiltered}
 }
