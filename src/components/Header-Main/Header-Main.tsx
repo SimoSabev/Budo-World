@@ -14,7 +14,7 @@ const HeaderMain = () => {
 
         <div className={styles.button_group}>
           <button type="button" className={styles.button2}>
-          <Link to="/martial-аrts">
+          <Link to="/martial-arts">
           Напред
               <img
                 className={styles.img2}
