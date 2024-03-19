@@ -10,9 +10,11 @@
   position: absolute;
   top: 2vh;
   left: 2vh;
-  padding:.8vh;
+  padding:1.3vh;
   border-radius: 6vh;
+  border: none;
   width: 15vh;
+  font-size: larger;
   cursor: pointer;
   color: #f3e9e9;
   background-color: #303030;
@@ -43,7 +45,7 @@
   text-align: center;
   transition: .3s;
 }
-.questionnaire_button {
+/* .questionnaire_button {
   position: relative;
   top: 1.4vh;
   left: 21.7vh;
@@ -54,27 +56,39 @@
   border: none;
   cursor: pointer;
   transition: .3s;
-  margin: 1.5vh 0; /* Adjust the margin as needed */
-  align-self: center; /* Aligns the button to the center horizontally */
+  margin: 1.5vh 0; 
+  align-self: center; 
 }
 
 .link_button {
   position: relative;
-  top: 30vh;
-  left: 0.35vh;
-  padding: 2vh 5vh;
-  border-radius: 5vh;
-  font-size: 1.7rem;
-  background-color: #ff2600;
+  top: 1.4vh;
+  left: 21.7vh;
+  padding: 1.4vh 5vh;
+  font-size: 1.1rem;
+  background-color: #ff3c00;
   color: #fff;
   border: none;
   cursor: pointer;
-  transition: .2s;
-  align-self: center; /* Aligns the button to the center horizontally */
-  margin-top: 3vh; /* Adjust the top margin as needed */
+  transition: .3s;
+  margin: 1.5vh 0; 
+  align-self: center; 
+} */
+
+
+.link_button {
+  width: 90%;
+  max-width: 90%;
+  height: 90%;
+  position: relative;
+  padding: 3vh;
+  box-shadow: 0 3vh 1vh rgba(0, 0, 0, 0.1);
+  border-radius: 3vh;
+  text-align: center;
+  transition: .3s;
 }
 .questionnaire_button:hover{
-  background-color: #fc6c40;
+  background-color: #000000;
 }
  .result_container {
   margin-top: 20px;
@@ -92,19 +106,3 @@
   font-size: 1rem;
   margin: 5px 0;
 } 
-.link_button {
-  position: relative;
-  top: 30vh;
-  left: .35vh;
-  padding: 2vh 5vh;
-  border-radius: 5vh;
-  font-size: 1.7rem;
-  background-color: #ff2600;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  transition:.2s;
-}
-.link_button:hover {
-  background-color: #fc5640;
-}

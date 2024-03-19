@@ -44,7 +44,7 @@ export default function Martial() {
                     <input
                         className={styles.search_bar}
                         type="text"
-                        placeholder="Search martial arts..."
+                        placeholder="Потърсете бойни изкуства..."
                         value={searchTerm}
                         onChange={handleSearchChange}
                     />

@@ -6,7 +6,7 @@
 }
 
 .header {
-    max-width: 35vw;
+    max-width: 40vw;
     font-size: 5rem;
     color: #f7f1e4;
     font-family: 'Russo One', sans-serif;
@@ -15,22 +15,25 @@
 .min_header {
     margin-top: 2rem;
     max-width: 50vw;
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #f7f1e4;
     font-family: 'Russo One', sans-serif;
 }
 
 .button_group {
+    position: relative;
+    right: 3vh;
     display: flex;
     align-items: center;
     justify-content: start;
     margin-top: 2.5rem;
+    margin-right: 2rem;
     gap: 7rem;
 }
 
 .button, .button1, .button2 {
     border: none;
-    padding: 1rem 1.5rem;
+    padding: .7rem 1.5rem;
     border-radius: 1.25rem;
     z-index: 2;
     cursor: pointer;
@@ -50,6 +53,8 @@
 
 .button2 {
     background-color: orangered;
+    color: antiquewhite;
+    padding-right: 6.5vh;    
 }
 
 .img1, .img2 {
@@ -67,31 +72,13 @@
 .text {
     display: flex;
     align-items: center;
-    font-size: 1.75rem;
+    font-size: 1.4rem;
 }
 
 .Image {
     width: 100%;
     max-width: 40vh;
 }
-
-/*@media (max-width: 768px) {*/
-/*   .Image {*/
-/*       left: 50%; !* Adjust the position for smaller screens *!*/
-/*       bottom: 10vh; !* Adjust the position for smaller screens *!*/
-/*       width: 40%; !* Adjust the width for smaller screens *!*/
-/*       max-width: 30vh; !* Set a maximum width for smaller screens *!*/
-/*       transform: translateX(-50%); !* Center the image horizontally *!*/
-/*   }*/
-/*}*/
-
-/*@media (max-width: 480px) {*/
-/*   .Image {*/
-/*       bottom: 5vh; !* Adjust the position for even smaller screens *!*/
-/*       width: 60%; !* Adjust the width for even smaller screens *!*/
-/*       max-width: 20vh; !* Set a maximum width for even smaller screens *!*/
-/*   }*/
-/*}*/
 
 .img {
     width: 100%;
