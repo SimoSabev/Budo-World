@@ -1,108 +1,100 @@
 .container {
-   display: flex;
-   flex-wrap: wrap-reverse;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    margin-top: 15rem;
+    gap: 2rem;
 }
-.main{
-   position: relative;
-   left: 25vh;
-}
+
 .header {
-    position: relative;
-    right: 17vh;
-    margin-top: 28vh;
-    font-family: 'Tektur', sans-serif;
-    font-size: 4em;
+    max-width: 35vw;
+    font-size: 5rem;
     color: #f7f1e4;
     font-family: 'Russo One', sans-serif;
 }
-.button_group{
-   display: flex;
-   align-items: center;
-   position: relative;
-   top: 5vh;
-   right: 17vh;
- }
-button{
+
+.min_header {
+    margin-top: 2rem;
+    max-width: 50vw;
+    font-size: 2.5rem;
+    color: #f7f1e4;
+    font-family: 'Russo One', sans-serif;
+}
+
+.button_group {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-top: 2.5rem;
+    gap: 7rem;
+}
+
+.button, .button1, .button2 {
     border: none;
-    padding: 2vh;
-    border-radius: 2vh;
-    font-size: 2.4vh;
+    padding: 1rem 1.5rem;
+    border-radius: 1.25rem;
     z-index: 2;
-}
-a{
-   text-decoration: none;  
-   color: #d4d1c8;
-}
-.button1{
-   margin-left: 14vh;
-   cursor: pointer;
-   font-size: 2vh;
-   padding-left: 5vh;
-   width: 30%;
-   background-color: orangered;
-   font-family: 'Russo One', sans-serif;
-   
-}
-.button2{
     cursor: pointer;
-    font-size: 1.15em;
-    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: normal;
+    gap: 2rem;
+    min-width: 20rem;
+    font-family: 'Russo One', sans-serif;
+
+}
+
+.button1 {
     background-color: #3a3a3a;
     color: antiquewhite;
-    padding-right: 7vh;
-    font-family: 'Russo One', sans-serif;
- }
- 
- .img1 {
-    position: absolute;
-    margin-top: -1.6vh;
-    margin-left: -4.5vh;
-    width: 5vh;
-    z-index: -3;
- }
+}
 
- .img2 {
-    position: absolute;
-    margin-top: -.95vh;
-    margin-left: 1vh;
-    width: 4.5vh;
-    z-index: -3;
- }
+.button2 {
+    background-color: orangered;
+}
 
- .button1:hover{
+.img1, .img2 {
+    width: 2.25rem;
+}
+
+.button1:hover {
+    background-color: rgb(148, 148, 148);
+}
+
+.button2:hover {
     background-color: rgb(255, 123, 0);
- }
- .button2:hover{
-   background-color: rgb(148, 148, 148);
 }
+
+.text {
+    display: flex;
+    align-items: center;
+    font-size: 1.75rem;
+}
+
 .Image {
-   position: absolute;
-   left: 72%;
-   bottom: 26.5vh; 
-   width: 20%; /* Adjust the width as needed */
-   max-width: 40vh; /* Set a maximum width */
+    width: 100%;
+    max-width: 40vh;
 }
 
-@media (max-width: 768px) {
-   .Image {
-       left: 50%; /* Adjust the position for smaller screens */
-       bottom: 10vh; /* Adjust the position for smaller screens */
-       width: 40%; /* Adjust the width for smaller screens */
-       max-width: 30vh; /* Set a maximum width for smaller screens */
-       transform: translateX(-50%); /* Center the image horizontally */
-   }
-}
+/*@media (max-width: 768px) {*/
+/*   .Image {*/
+/*       left: 50%; !* Adjust the position for smaller screens *!*/
+/*       bottom: 10vh; !* Adjust the position for smaller screens *!*/
+/*       width: 40%; !* Adjust the width for smaller screens *!*/
+/*       max-width: 30vh; !* Set a maximum width for smaller screens *!*/
+/*       transform: translateX(-50%); !* Center the image horizontally *!*/
+/*   }*/
+/*}*/
 
-@media (max-width: 480px) {
-   .Image {
-       bottom: 5vh; /* Adjust the position for even smaller screens */
-       width: 60%; /* Adjust the width for even smaller screens */
-       max-width: 20vh; /* Set a maximum width for even smaller screens */
-   }
-}
+/*@media (max-width: 480px) {*/
+/*   .Image {*/
+/*       bottom: 5vh; !* Adjust the position for even smaller screens *!*/
+/*       width: 60%; !* Adjust the width for even smaller screens *!*/
+/*       max-width: 20vh; !* Set a maximum width for even smaller screens *!*/
+/*   }*/
+/*}*/
 
 .img {
-   width: 100%; /* Make the image width 100% of its container */
-   height: auto; /* Maintain aspect ratio */
+    width: 100%;
+    height: auto;
 }
 
