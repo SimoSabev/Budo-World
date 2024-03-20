@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React, {ChangeEvent, useState} from "react";
 import styles from "./organisation-cards.module.css";
-import { Link } from "react-router-dom";
 
-function EmblaCarousel() {
+export default function OrganisationCards({route} : {route: string}) {
   const [searchTerm, setSearchTerm] = useState("");
 
-  const handleSearch = (e) => {
+  const handleSearch = (e: ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(e.target.value);
   };
 
@@ -26,7 +25,7 @@ function EmblaCarousel() {
   );
 }
 
-const renderCards = (searchTerm) => {
+function renderCards(searchTerm: string) {
   const cities = [
     { name: "Варна", desc: "Шисейкан Айкидо доджо Варна", route: "/Shiseikan" },
     { name: "Бургас", desc: "Айкикай Айкидо България", route: "/burgas" },
@@ -51,7 +50,7 @@ const renderCards = (searchTerm) => {
 
   return filteredCities.map((city, index) => (
     <div className={styles[`card${index + 1}`]} key={index}>
-      <Link to={city.route}> {/* Use custom route for each card */}
+      {/*<Link to={city.route}> /!* Use custom route for each card *!/*/}
         <a className={styles.materialCard} href={""}>
           <img
             className={styles.cardPicture}
@@ -63,9 +62,7 @@ const renderCards = (searchTerm) => {
             <p className={styles.cardDesc}>{city.desc}</p>
           </div>
         </a>
-      </Link>
+      {/*</Link>*/}
     </div>
   ));
-};
-
-export default EmblaCarousel;
+}
