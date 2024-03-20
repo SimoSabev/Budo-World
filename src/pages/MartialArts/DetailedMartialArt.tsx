@@ -3,6 +3,9 @@ import { useParams } from "react-router-dom";
 import GlobalLayout from "../../components/layouts/globalLayout/globalLayout";
 import useDetailedMartialArt from "../../firestore/useDetailedMartialArts";
 import {IDetailedMartialArt} from "../../Models/martial-arts/IDetailedMartialArt";
+import MartialArtMainImage from "../../components/DetailedMartialArt/mainImage/MainImage";
+import TextSection from "../../components/DetailedMartialArt/textSection/TextSection";
+import OrganisationCards from "../../components/DetailedMartialArt/organisations/OrganisationCards";
 
 export default function DetailedMartialArt() {
 
@@ -20,7 +23,18 @@ export default function DetailedMartialArt() {
 
     return (
         <GlobalLayout>
-            <h1>{martialArtName}</h1>
+            <div>
+                <MartialArtMainImage
+                    imageSrc={currentDetailedMartialArt?.headImageSrc as string}
+                />
+                <TextSection
+                    heading={currentDetailedMartialArt?.heading as string}
+                    text={currentDetailedMartialArt?.history as string}
+                />
+                <OrganisationCards
+                    route={currentDetailedMartialArt?.route as string}
+                />
+            </div>
         </GlobalLayout>
     )
 }
