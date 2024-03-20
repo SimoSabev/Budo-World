@@ -67,8 +67,11 @@
   
   .button {
     background-color: rgb(255, 17, 0);
+    padding: 2vh;
     margin: 1vh;
     border: none;
+    border-radius: 3vh;
+    font-size: larger;
     color: white;
     cursor: pointer;
   }
