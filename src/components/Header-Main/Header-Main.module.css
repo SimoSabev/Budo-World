@@ -2,21 +2,25 @@
     display: flex;
     flex-wrap: wrap-reverse;
     margin-top: 15rem;
+    margin-right: 5rem;
     gap: 2rem;
 }
 
 .header {
-    max-width: 40vw;
-    font-size: 5rem;
+    max-width: 50vw;
+    font-size: 5.5rem;
     color: #f7f1e4;
     font-family: 'Russo One', sans-serif;
 }
-
+.header_first{
+    font-size: 4rem;
+}
 .min_header {
-    margin-top: 2rem;
+    margin-top: 1rem;
     max-width: 50vw;
     font-size: 2rem;
     color: #f7f1e4;
+    font-weight: 475;
     font-family: 'Russo One', sans-serif;
 }
 
@@ -78,10 +82,13 @@
 .Image {
     width: 100%;
     max-width: 40vh;
+    position: relative;
+    bottom: 7rem;
+    left: 2rem;
 }
 
 .img {
-    width: 100%;
+    width: 120%;
     height: auto;
 }
 

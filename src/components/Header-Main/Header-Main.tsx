@@ -11,7 +11,7 @@ const HeaderMain = () => {
         <div>
           <h1 className={styles.header}>
             {/*Тук може да откриете всичко за бойните изкуства и как да започнете да се заниавате с тях*/}
-            Добре дошли в Будо Свят
+           <div className={styles.header_first}>Добре дошли в</div> Будо Свят
           </h1>
           <h3 className={styles.min_header}>
             {" "}
