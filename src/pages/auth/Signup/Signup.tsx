@@ -3,6 +3,7 @@ import {Link, useNavigate} from "react-router-dom";
 import {createUserWithEmailAndPassword, onAuthStateChanged} from 'firebase/auth';
 import {auth} from "../../../firebase-config";
 import styles from './Signup.module.css';
+import useLikedSports from "../../../firestore/useLikedSports";
 
 export default function Signup() {
     const [registerEmail, setRegisterEmail] = useState('');
@@ -11,6 +12,7 @@ export default function Signup() {
 
     const navigate = useNavigate();
 
+    const {setLike} = useLikedSports();
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -26,7 +28,11 @@ export default function Signup() {
 
     const signup = async (submit: FormEvent) => {
         submit.preventDefault();
-        await createUserWithEmailAndPassword(auth, registerEmail, registerPassword).catch((reason) => reason);
+        await createUserWithEmailAndPassword(auth, registerEmail, registerPassword)
+            .then((value) => {
+                setLike(value.user.uid);
+            })
+            .catch((reason) => reason);
     };
 
     return (

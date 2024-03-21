@@ -6,6 +6,7 @@ import {IDetailedMartialArt} from "../../Models/martial-arts/IDetailedMartialArt
 import MartialArtMainImage from "../../components/DetailedMartialArt/mainImage/MainImage";
 import TextSection from "../../components/DetailedMartialArt/textSection/TextSection";
 import OrganisationCards from "../../components/DetailedMartialArt/organisations/OrganisationCards";
+import Like from "../../components/SVGs/Likes/Like";
 
 export default function DetailedMartialArt() {
 
@@ -24,6 +25,7 @@ export default function DetailedMartialArt() {
     return (
         <GlobalLayout>
             <div>
+                <Like route={martialArtName as string}/>
                 <MartialArtMainImage
                     imageSrc={currentDetailedMartialArt?.headImageSrc as string}
                 />

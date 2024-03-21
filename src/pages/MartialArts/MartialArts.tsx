@@ -1,6 +1,6 @@
 import React, {ChangeEvent, useEffect, useRef, useState} from 'react';
 import GlobalLayout from "../../components/layouts/globalLayout/globalLayout";
-import {Link, useSearchParams} from "react-router-dom";
+import {useSearchParams} from "react-router-dom";
 import styles from "./Martial.module.css";
 import Card from "../../components/martial-arts-cards/martial-arts-cards";
 import useMartialArtCards from "../../firestore/useMartialArtCards";
