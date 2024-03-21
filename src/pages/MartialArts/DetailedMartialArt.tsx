@@ -7,6 +7,9 @@ import MartialArtMainImage from "../../components/DetailedMartialArt/mainImage/M
 import TextSection from "../../components/DetailedMartialArt/textSection/TextSection";
 import OrganisationCards from "../../components/DetailedMartialArt/organisations/OrganisationCards";
 import Like from "../../components/SVGs/Likes/Like";
+import {auth} from "../../firebase-config";
+import {ILikedMartialArts} from "../../Models/ILikedMartialArts";
+import {onAuthStateChanged} from "firebase/auth";
 
 export default function DetailedMartialArt() {
 
@@ -16,16 +19,18 @@ export default function DetailedMartialArt() {
 
     const [currentDetailedMartialArt, setCurrentDetailedMartialArt] = useState<IDetailedMartialArt>()
 
+    const [user, setUser] = useState(auth.currentUser);
 
     useEffect(() => {
         getDetailedMartialArt(martialArtName!).then((data) => setCurrentDetailedMartialArt(data))
+        return () => onAuthStateChanged(auth, setUser)();
     }, []);
 
 
     return (
         <GlobalLayout>
             <div>
-                <Like route={martialArtName as string}/>
+                {user && user.uid && <Like route={martialArtName as string}/>}
                 <MartialArtMainImage
                     imageSrc={currentDetailedMartialArt?.headImageSrc as string}
                 />
