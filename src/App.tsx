@@ -31,6 +31,7 @@ export default function App() {
         </Route>
 
         <Route path={"/questions"} element={<Questionnaire />} />
+        <Route path={"/questions/:questionId"} element={<Questionnaire />} />
 
         <Route path={"/404"} element={<PageNotFound />}/>
         <Route path={"/*"} element={<PageNotFound />}/>
