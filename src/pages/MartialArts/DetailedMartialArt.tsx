@@ -9,8 +9,8 @@ import TextSection from "../../components/DetailedMartialArt/textSection/TextSec
 import OrganisationCards from "../../components/DetailedMartialArt/organisations/OrganisationCards";
 import Like from "../../components/SVGs/Likes/Like";
 import {auth} from "../../firebase-config";
-import {ILikedMartialArts} from "../../Models/ILikedMartialArts";
 import {onAuthStateChanged} from "firebase/auth";
+import {ISportsClub} from "../../Models/SportsClub";
 
 export default function DetailedMartialArt() {
 
@@ -42,7 +42,7 @@ export default function DetailedMartialArt() {
                 />
                 
                 <OrganisationCards
-                    route={currentDetailedMartialArt?.route as string}
+                    organisations={currentDetailedMartialArt?.organisations as Array<ISportsClub>}
                 />
             </div>
         </GlobalLayout>
