@@ -24,8 +24,12 @@ export default function Martial() {
             mounted.current = true;
         }
 
-        setSearchParams(() => ({search: searchTerm}));
-        getFiltered(searchTerm).then((r) => setFilteredCards(r))
+        setSearchParams(() => ({search: searchTerm, type: searchParams.get("type") ?? ""}));
+        getFiltered(
+            searchTerm,
+            (searchParams.get("type") && searchParams.get("type")  !== "") ? searchParams.get("type")!.split(",") : []
+        )
+            .then((r) => setFilteredCards(r))
     }, [searchTerm]);
 
     const handleSearchChange = (e: ChangeEvent<HTMLInputElement>) => setSearchTerm(e.target.value);

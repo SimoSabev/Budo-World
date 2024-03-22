@@ -28,16 +28,22 @@ export default function useMartialArtCards() {
     const getAll = () => getDocs(MartialArtsCardsCollection);
 
 
-    const getFiltered = async (searchTerm: string) =>
+    const getFiltered = async (searchTerm: string = "", types: string[] = []) =>
         (await getAll()).docs
             .map((martialArtsData) =>
                 martialArtsData.data()
-            ).filter((martialArtCard) =>
-            martialArtCard.heading.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            martialArtCard.route.toLowerCase().includes(searchTerm.toLowerCase())
-        ).sort((a, b) =>
-            a.heading.localeCompare(b.heading)
-        );
+            )
+            .filter((martialArtCard) =>
+                types.length !== 0 ?
+                (types.filter(value => martialArtCard.type.includes(value)).length / types.length) * 100 >= 50 : true
+            )
+            .filter((martialArtCard) =>
+                martialArtCard.heading.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                martialArtCard.route.toLowerCase().includes(searchTerm.toLowerCase())
+            )
+            .sort((a, b) =>
+                a.heading.localeCompare(b.heading)
+            );
 
     return {getOne, setOne, getAll, getFiltered}
 }
