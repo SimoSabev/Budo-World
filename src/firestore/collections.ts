@@ -5,6 +5,7 @@ import {CollectionReference} from "@firebase/firestore";
 import {IMartialArtCard} from "../Models/MartialArtCard";
 import {ISportsClub} from "../Models/SportsClub";
 import {ILikedMartialArts} from "../Models/ILikedMartialArts";
+import {IQuestion} from "../Models/Question";
 
 export function createCollection<T>(collectionName: string) {
     return collection(db, collectionName) as CollectionReference<T>
@@ -16,4 +17,6 @@ export const MartialArtsDetailedCollection = createCollection<IDetailedMartialAr
 
 export const SportsClubsCollection = createCollection<ISportsClub>("sports-club");
 
-export const LikedMartialArtsCollection = createCollection<ILikedMartialArts>("liked-martial-arts")
+export const LikedMartialArtsCollection = createCollection<ILikedMartialArts>("liked-martial-arts");
+
+export const QuestionsCollection = createCollection<IQuestion>("questions");

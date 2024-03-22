@@ -7,20 +7,19 @@ export const questions: IQuestion[] = [
         options: [
             {
                 option: "Самозащита",
-                points: 0,
-                // type: ["self-defence"]
+                resultType: ["self-defence"]
             },
             {
                 option: "Здраве",
-                points: 0
+                resultType: ["health"]
             },
             {
                 option: "Увереност",
-                points: 0
+                resultType: ["confidence"]
             },
             {
                 option: "Като хоби",
-                points: 0
+                resultType: ["hobby"]
             }
         ]
     },
@@ -30,21 +29,20 @@ export const questions: IQuestion[] = [
         options: [
             {
                 option: "Източни бойни изкусва",
-                points: 50
+                resultType: ["east-martial-art"]
             },
             {
                 option: "Бойни спортове",
-                points: 500,
-                //type: ["combat-sport"]
+                resultType: ["combat-sport"]
             },
             {
                 option: "Бойни изкуства с оръжия",
-                points: 2000
+                resultType: ["weapon"]
             },
-            {
-                option: "Източни практики за здраве",
-                points: 5000
-            }
+            // {
+            //     option: "Източни практики за здраве",
+            //     resultType: [""]
+            // }
         ]
     },
     {
@@ -53,21 +51,18 @@ export const questions: IQuestion[] = [
         options: [
             {
                 option: "Удрящи/ритащи",
-                points: 10
+                resultType: ["striking", "kicking"]
             },
             {
                 option: "Задържащи",
-                points: 50,
-                // type: ["grappling"]
+                resultType: ["grappling"]
             },
             {
                 option: "Заключващи/контролиращи",
-                points: 50
+                resultType: ["grappling"]
             }
         ]
     },
-
-    // resultType: ["self-defence", "combat-sport", "grappling"]
     // {
     //     id: 4,
     //     question: "За какво време бихте се занимавали?",

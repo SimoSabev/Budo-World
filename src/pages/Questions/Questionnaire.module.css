@@ -24,6 +24,11 @@
   background-color: rgb(105, 105, 105);
 }
 
+.back_button_text {
+    width: fit-content;
+    margin: auto;
+}
+
 .container{
   display: flex;
   flex-direction: column;
