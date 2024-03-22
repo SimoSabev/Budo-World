@@ -1,13 +1,23 @@
 .container {
     display: flex;
     flex-wrap: wrap-reverse;
-    margin-top: 12rem;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 12rem;++ */
     gap: 4rem;
+    /* border: 1px solid red; */
+    box-sizing: border-box;
 }
-
+.main_container_header{
+    display: flex;
+    justify-content: center;
+    flex-direction: column ;
+    /* border: 1px solid yellow; */
+    width: fit-content;
+}
 .header {
     max-width: 40vw;
-    font-size: 5rem;
+    font-size: 4.3rem;
     color: #f7f1e4;
     font-family: 'Russo One', sans-serif;
 }
@@ -15,31 +25,39 @@
 .min_header {
     margin-top: 2rem;
     max-width: 50vw;
-    font-size: 2rem;
+    font-size: 1.7rem;
     color: #f7f1e4;
     font-family: 'Russo One', sans-serif;
 }
 
 .button_group {
-    position: relative;
-    right: 3vh;
     display: flex;
-    align-items: center;
-    justify-content: start;
+    width: 100%;
+     gap:20px;
+    /* align-items: center; */
+    /* justify-content: center; */
     margin-top: 2.5rem;
-    margin-right: 2rem;
-    gap: 7rem;
+    /* margin-right: 2rem; */
+    box-sizing: border-box;
+     /* gap: 10px; */
+    /* gap: 7rem; */
+    /* min-width: 600px; */
+    /* border:1px solid red; */
 }
 
 .button, .button1, .button2 {
+    /* min-width: fit-content; */
+    white-space: nowrap;
     border: none;
+    flex:1;
+    /* width: 100%; */
     padding: .7rem 1.5rem;
     border-radius: 1.25rem;
     z-index: 2;
     cursor: pointer;
     display: flex;
     justify-content: center;
-    align-items: normal;
+    align-items: center;
     gap: 2rem;
     font-family: 'Russo One', sans-serif;
 }
@@ -47,12 +65,13 @@
 .button1 {
     background-color: #3a3a3a;
     color: antiquewhite;
+    /* width: 90%; */
 }
 
 .button2 {
     background-color: orangered;
     color: antiquewhite;
-    padding-right: 6.5vh;    
+     padding-right: 6.5vh
 }
 
 .img1, .img2 {
@@ -73,19 +92,16 @@
     font-size: 1.4rem;
 }
 
-.Image {
-    position: relative;
-    bottom: 12vh;
-    width: 100%;
-    max-width: 40vh;
-}
+
 
 .img {
-    width: 130%;
+    width: 100%;
     height: auto;
+    min-height: 300px;
+    max-width: 50vh;
 }
 
-@media screen and (max-width: 750px) {
+/* @media screen and (max-width: 750px) {
     .header {
         font-size: 2rem;
         color: red;  
@@ -114,5 +130,4 @@
     .button_group {
         gap: 2rem;
     }
-    /* Add more specific styles for smaller screens if needed */
-}
+} */

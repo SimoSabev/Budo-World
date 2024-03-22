@@ -14,7 +14,7 @@ export default function OrganisationCards({route} : {route: string}) {
         <input
           className={styles.input}
           type="text"
-          placeholder="Search by City"
+          placeholder="Търсете по град"
           value={searchTerm}
           onChange={handleSearch}
         />

@@ -1,48 +1,51 @@
 /* Navbar.module.css */
 .nav_bar {
+  top: 0;
+  left: 0;
+  position: fixed;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   background-color: #131212;
+  gap: 8rem;
   width: 100vw;
   height: 8vh;
   font-size: 1.2rem;
   font-family: 'Tektur', sans-serif;
   z-index: 100;
- }
- 
- .ul {
+}
+
+.ul {
   display: flex;
   align-items: center;
   padding: 0;
- }
- 
- .li_1,
- .li_2,
- .li_3 {
-  margin-right: 2.2vh;  
+}
+
+.li_1,
+.li_2,
+.li_3 {
+  margin-right: 2.2vh;
   list-style: none;
- }
- 
- .li_1 a,
- .li_2 a,
- .li_3 a {
+}
+
+.li_1 a,
+.li_2 a,
+.li_3 a {
   color: rgb(255, 255, 255);
   padding: 1vh;
   border-radius: 1.8vh;
   transition: .3s;
- }
+}
 
- .li_1 a:hover,
- .li_2 a:hover,
- .li_3 a:hover {
+.li_1 a:hover,
+.li_2 a:hover,
+.li_3 a:hover {
   background-color: rgb(255, 8, 0);
- }
+}
 
- 
- .left,
- .middle,
- .right {
+
+.left,
+.middle,
+.right {
   display: flex;
- }
- 
+}

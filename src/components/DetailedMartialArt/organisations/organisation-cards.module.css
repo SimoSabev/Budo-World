@@ -1,19 +1,23 @@
 /* organisation-cards.module.css */
 .main{
-    position: relative;
-    top: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    /* gap:50px; */
 }
 /* Search Bar */
 .searchBar {
     margin-bottom: 4vh;
+    width: 80%;
   }
   
   .input[type="text"] {
-    width: 80%;
+    width: 100%;
     height: 2vh;
     padding: 1.5vw;
-    position: relative;
-    left: 20vh;
+    /* position: relative; */
+    /* left: 20vh; */
     box-sizing: border-box;
     border: 0.5vw solid #28292a;
     border-radius: 2vw;
@@ -24,9 +28,9 @@
   /* Material Web Card */
   /* Block */
   .container{
-    width: 90vw;
-    position: relative;
-    left: 8.5vh;
+    width: 90%;
+    /* position: relative; */
+    /* left: 8.5vh; */
     display: flex;
     justify-content: center;
     align-items: center;

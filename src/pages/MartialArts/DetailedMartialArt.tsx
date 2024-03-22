@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import styles from './DetailedMartialArt.module.css'
 import { useParams } from "react-router-dom";
 import GlobalLayout from "../../components/layouts/globalLayout/globalLayout";
 import useDetailedMartialArt from "../../firestore/useDetailedMartialArts";
@@ -29,8 +30,9 @@ export default function DetailedMartialArt() {
 
     return (
         <GlobalLayout>
-            <div>
+            <div className={styles.container}>
                 {user && user.uid && <Like route={martialArtName as string}/>}
+
                 <MartialArtMainImage
                     imageSrc={currentDetailedMartialArt?.headImageSrc as string}
                 />
@@ -38,6 +40,7 @@ export default function DetailedMartialArt() {
                     heading={currentDetailedMartialArt?.heading as string}
                     text={currentDetailedMartialArt?.history as string}
                 />
+                
                 <OrganisationCards
                     route={currentDetailedMartialArt?.route as string}
                 />

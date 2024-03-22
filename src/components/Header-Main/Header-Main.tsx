@@ -7,8 +7,8 @@ const HeaderMain = () => {
 
   return (
     <div className={styles.container}>
-      <div>
-        <div>
+      <div className={styles.main_container_header}>
+        <div className={styles.container_header}>
           <h1 className={styles.header}>
             {/*Тук може да откриете всичко за бойните изкуства и как да започнете да се заниавате с тях*/}
            <div className={styles.header_first}>Добре дошли в</div> Будо Свят
@@ -45,13 +45,10 @@ const HeaderMain = () => {
           </button>
         </div>
       </div>
-
-      <div className={styles.Image}>
         <img
           className={styles.img}
           src="https://cdn.discordapp.com/attachments/1171074802816126996/1206328492527198290/bushido_1.png?ex=6609c075&is=65f74b75&hm=6bc4de5d0133c0fc80fd74dac119d8fe4b3c8c5baef01533c892091ee4426e7e&"
         />
-      </div>
     </div>
   );
 };

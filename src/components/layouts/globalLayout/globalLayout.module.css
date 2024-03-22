@@ -1,9 +1,22 @@
 .container {
     background: url('https://i.pinimg.com/564x/75/f0/97/75f0977e5d87b8fda51fafc4c2198cef.jpg') center/cover fixed no-repeat;
     min-height: 100vh;
+    height: fit-content;
+    width: 100%;
+    min-width: 100vw;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding-top:10vh; */
 }
 
 .centerContent {
     display: flex;
     justify-content: center;
+       width: 100vw;
+    max-width: 100%;
+    overflow-x: hidden;
+    /* align-items: center; */
+    /* max-width: 100%; */
 }

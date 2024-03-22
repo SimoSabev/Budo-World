@@ -18,17 +18,16 @@ export default function Navbar() {
 
     return (
         <nav className={styles.nav_bar}>
-            <div className={styles.left}>
+            
                 <li className={styles.li_1}>
                     <Link to="/">Начало</Link>
                 </li>
-            </div>
-            <div className={styles.middle}>
+            
+            
                 <li className={styles.li_2}>
                     <Link to="/martial-arts">Бойни изкуства</Link>
                 </li>
-            </div>
-            <div className={styles.right}>
+            
                 <li className={styles.li_3}>
                     {(user && user.uid) ? (
                             <a type={"button"} onClick={() => signOut(auth)}>
@@ -38,7 +37,6 @@ export default function Navbar() {
                         <Link to="/auth/login">Вписване</Link>
                     }
                 </li>
-            </div>
         </nav>
     );
 };

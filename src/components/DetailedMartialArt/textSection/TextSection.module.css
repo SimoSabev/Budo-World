@@ -1,22 +1,12 @@
-/* In your CSS */
-.main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    left: 25vh;
-    width: 110vw;
-    max-width: 100vh;
-    height: 100%;
-  }
+In your CSS
+
   
   .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 75vw; /* Adjust as needed */
-    left: 40vh;
-    margin: auto;
+    justify-content: center;
+    gap:40px;
     
   }
   
@@ -25,21 +15,21 @@
     width: 60vw;
     right: 4vh;
     height: 60vh; /* Custom height */
-    position: relative;
+    
   }
   
   .contentContainer {
     background-color: #444444; /* Choose your desired background color */
     border-radius: 3vh;
     padding: 4vh; /* Adjust padding as needed */
-    position: relative;
-    top: 20vh;
-    width: 110%;
+    
+
+    width: 80%;
     box-sizing: border-box; /* Include padding in width */
   }
   
   .content {
-    position: relative;
+    
     width: 100%;
     max-width: 100%;
   }
@@ -47,7 +37,7 @@
   .header {
     font-size: 3vw; /* Adjust as needed */
     color: aliceblue;
-    margin-bottom: 2vh;
+    /* margin-bottom: 2vh; */
   }
   
   .content_history {
@@ -58,12 +48,12 @@
   .video_group {
     display: flex;
     align-items: center;
-    position: relative;
-    top: 50vh;
+    
+    /* top: 50vh; */
   }
   
   .video {
-    margin-bottom: 15vh; /* Adjust as needed */
+   /*  margin-bottom: 15vh; Adjust as needed */
     padding: 5vh;
   }
   
