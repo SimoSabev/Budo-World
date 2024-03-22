@@ -1,81 +1,63 @@
-import React, { useState, useEffect } from "react";
-import Question from "./Question";
+import React, {useState, useEffect} from "react";
+import Question from "../../components/Question/Question";
 import styles from "./Questionnaire.module.css";
-import { Link, useNavigate } from "react-router-dom";
-import {questions} from "../../Data/questions";
+import {createSearchParams, Link, useNavigate, useParams} from "react-router-dom";
+import {IQuestion} from "../../Models/Question";
+import useQuestions from "../../firestore/useQuestions"
 
-export default function Questionnaire () {
-  const [answers, setAnswers] = useState<{questionId: number, selectedAnswer: number, points: number}[]>([]);
-  const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [totalScore, setTotalScore] = useState(0);
-  const navigate = useNavigate();
+export default function Questionnaire() {
+    const {getOne} = useQuestions();
 
-  const handleAnswer = (questionId: number, selectedAnswer: number) => {
-    const points = questions[currentQuestion].options[selectedAnswer].points;
+    const navigate = useNavigate();
+    const [answers, setAnswers] = useState<string[]>([]);
+    const [currentQuestion, setCurrentQuestion] = useState<IQuestion>();
+    const [finalize, setFinalize] = useState(false);
 
-    // Add the points to the total score
-    setTotalScore((prevScore) => prevScore + points);
+    const { questionId } = useParams<string>();
 
-    // Update the answers array with the question ID, selected answer, and points
-    setAnswers([...answers, { questionId, selectedAnswer, points }]);
+    useEffect(() => {
+        if(!questionId) navigate("1");
+        else if(questionId == "finalize") setFinalize(true)
+        else if(questionId) getOne(questionId).then(r => setCurrentQuestion(r));
+    }, [questionId]);
 
-    // Move to the next question
-    setCurrentQuestion((prevQuestion) => prevQuestion + 1);
-  };
+    useEffect(() => {
+        // console.log(finalize, `/martial-arts?search=&types=${answers.join(",")}`);
+        if(finalize) navigate({pathname: "/martial-arts", search: createSearchParams({type: answers.join(",")}).toString()});
+    }, [finalize]);
 
-  useEffect(() => {
-    if (currentQuestion === questions.length) {
-      if (totalScore >= 60 && totalScore < 100) {
-        navigate("/filter1");
-      } 
-      else if (totalScore >= 100 && totalScore < 510) {
-        navigate("/filter2");
-      }
-      else if (totalScore >= 510 && totalScore < 550) {
-        navigate("/filter3");
-      } 
-      else if (totalScore >= 550 && totalScore < 2000) {
-        navigate("/filter4");
-      } 
-      else if (totalScore >= 2000 && totalScore < 5000) {
-        navigate("/filter5");
-      } 
-      else if (totalScore >= 5000) {
-        navigate("/filter6");
-      }
-    }
-  }, [currentQuestion, totalScore, navigate, questions.length]);
+    const handleAnswer = (selectedAnswer: string[]) => {
+        setAnswers((prevState) => [...prevState, ...selectedAnswer]);
+        navigate(`/questions/${(currentQuestion?.id as number) + 1}`)
+    };
 
-  return (
-    <div className={styles.main_container}>
-      <Link to="/">
-        <div>
-          <button type="button" className={styles.back_button}>
-            Назад
-          </button>
-        </div>
-      </Link>
-      <div className={styles.container}>
-        <div className={styles.questionnaire_container}>
-          {currentQuestion < questions.length ? (
-              <div className={styles.link_button}>
-                <Question
-                    id={questions[currentQuestion].id}
-                    text={questions[currentQuestion].question}
-                    options={questions[currentQuestion].options}
-                    onAnswer={handleAnswer}
-                />
-              </div>
-          ) : (
-            <div className={styles.result_container}>
-              <h2>Не успяхме да намерим подходящи предложения за Вас</h2>
-              <Link className={styles.link_button} to={"/martial-arts"}>
-                Към всички предложения
-              </Link>
+
+    return (
+        <div className={styles.main_container}>
+            <Link to="/" className={styles.back_button}>
+                <div className={styles.back_button_text}>
+                    Назад
+                </div>
+            </Link>
+            <div className={styles.container}>
+                <div className={styles.questionnaire_container}>
+                    {currentQuestion ? (
+                        <div className={styles.link_button}>
+                            <Question
+                                currentQuestion={currentQuestion}
+                                onAnswer={handleAnswer}
+                            />
+                        </div>
+                    ) : (
+                        <div className={styles.result_container}>
+                            <h2>Не успяхме да намерим подходящи предложения за Вас</h2>
+                            <Link className={styles.link_button} to={"/martial-arts"}>
+                                Към всички предложения
+                            </Link>
+                        </div>
+                    )}
+                </div>
             </div>
-          )}
         </div>
-      </div>
-    </div>
-  );
+    );
 };
