@@ -1,26 +1,22 @@
 .container {
     display: flex;
     flex-wrap: wrap-reverse;
-    margin-top: 15rem;
-    margin-right: 5rem;
-    gap: 2rem;
+    margin-top: 12rem;
+    gap: 4rem;
 }
 
 .header {
-    max-width: 50vw;
-    font-size: 5.5rem;
+    max-width: 40vw;
+    font-size: 5rem;
     color: #f7f1e4;
     font-family: 'Russo One', sans-serif;
 }
-.header_first{
-    font-size: 4rem;
-}
+
 .min_header {
-    margin-top: 1rem;
+    margin-top: 2rem;
     max-width: 50vw;
     font-size: 2rem;
     color: #f7f1e4;
-    font-weight: 475;
     font-family: 'Russo One', sans-serif;
 }
 
@@ -45,9 +41,7 @@
     justify-content: center;
     align-items: normal;
     gap: 2rem;
-    min-width: 20rem;
     font-family: 'Russo One', sans-serif;
-
 }
 
 .button1 {
@@ -80,15 +74,45 @@
 }
 
 .Image {
+    position: relative;
+    bottom: 12vh;
     width: 100%;
     max-width: 40vh;
-    position: relative;
-    bottom: 7rem;
-    left: 2rem;
 }
 
 .img {
-    width: 120%;
+    width: 130%;
     height: auto;
 }
 
+@media screen and (max-width: 750px) {
+    .header {
+        font-size: 2rem;
+        color: red;  
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .header {
+        font-size: 1.5rem;
+    }
+    .min_header {
+        font-size: 1.2rem;
+    }
+    .button_group {
+        gap: 4rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .header {
+        font-size: 1.2rem;
+    }
+    .min_header {
+        font-size: 1rem;
+    }
+    .button_group {
+        gap: 2rem;
+    }
+    /* Add more specific styles for smaller screens if needed */
+}
