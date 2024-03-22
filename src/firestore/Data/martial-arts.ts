@@ -1,4 +1,4 @@
-import { IMartialArtCard } from "../Models/MartialArtCard";
+import { IMartialArtCard } from "../../Models/MartialArtCard";
 
 export const martialArtsData: IMartialArtCard[] = [
     {

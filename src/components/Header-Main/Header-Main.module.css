@@ -1,6 +1,6 @@
 .container {
     display: flex;
-    flex-wrap: wrap-reverse;
+    /*flex-wrap: wrap-reverse;*/
     justify-content: center;
     align-items: center;
     /* margin-top: 12rem;++ */

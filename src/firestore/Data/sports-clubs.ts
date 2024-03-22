@@ -1,4 +1,4 @@
-import {ISportsClub} from "../Models/SportsClub";
+import {ISportsClub} from "../../Models/SportsClub";
 
 const imageUrls = [
     "Images/Shiseikan1.jpg",

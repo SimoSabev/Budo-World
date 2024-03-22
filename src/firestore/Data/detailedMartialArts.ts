@@ -1,4 +1,4 @@
-import { IDetailedMartialArt } from "../Models/martial-arts/IDetailedMartialArt";
+import { IDetailedMartialArt } from "../../Models/martial-arts/IDetailedMartialArt";
 
 export const detailedMartialArts: {
   name: string;
