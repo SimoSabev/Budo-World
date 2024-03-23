@@ -13,17 +13,19 @@ export default function Questionnaire() {
     const [currentQuestion, setCurrentQuestion] = useState<IQuestion>();
     const [finalize, setFinalize] = useState(false);
 
-    const { questionId } = useParams<string>();
+    const {questionId} = useParams<string>();
 
     useEffect(() => {
-        if(!questionId) navigate("1");
-        else if(questionId == "finalize") setFinalize(true)
-        else if(questionId) getOne(questionId).then(r => setCurrentQuestion(r));
+        if (!questionId) navigate("1");
+        else if (questionId == "finalize") setFinalize(true)
+        else if (questionId) getOne(questionId).then(r => setCurrentQuestion(r));
     }, [questionId]);
 
     useEffect(() => {
-        // console.log(finalize, `/martial-arts?search=&types=${answers.join(",")}`);
-        if(finalize) navigate({pathname: "/martial-arts", search: createSearchParams({type: answers.join(",")}).toString()});
+        if (finalize) navigate({
+            pathname: "/martial-arts",
+            search: createSearchParams({type: answers.join(",")}).toString()
+        });
     }, [finalize]);
 
     const handleAnswer = (selectedAnswer: string[]) => {
@@ -31,14 +33,17 @@ export default function Questionnaire() {
         navigate(`/questions/${(currentQuestion?.id as number) + 1}`)
     };
 
+    const handleBack = () => {
+        navigate(-1);
+    }
 
     return (
         <div className={styles.main_container}>
-            <Link to="/" className={styles.back_button}>
+            <button className={styles.back_button} onClick={handleBack}>
                 <div className={styles.back_button_text}>
                     Назад
                 </div>
-            </Link>
+            </button>
             <div className={styles.container}>
                 <div className={styles.questionnaire_container}>
                     {currentQuestion ? (
